@@ -5,9 +5,9 @@
 <title>Unboxing!</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="A Critical Making game">
-<meta name="twitter:description" content="Solve the challenges to unbox your own assumptions about making :)">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/thessaly/gametest/main/img/unboxing_logo.png">
+<meta name="twitter:title" content="Unboxing: a Critical Making game">
+<meta name="twitter:description" content="Solve the challenges to unbox your own assumptions towards critical making :)">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/thessaly/gametest/main/img/unboxing.png">
 <!--
 
 SugarCube (v2.36.1): A free (gratis and libre) story format.
@@ -106,6 +106,62 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/* Used to align label for volume slider */
+input[type=range] {
+	vertical-align: middle;
+}
+
+#ui-bar {
+  	background-color: rgba(0, 0, 0, 0);
+}
+
+.twitter-share-button {
+
+margin-top:20px;
+  margin-bottom:10px;
+
+box-shadow: 3px 3px white, -3px -3px white;
+}
+
+#menu {
+font-weight: bold;
+
+}
+
+#menu-item-saves {
+font-weight: bold;
+  border:none;
+}
+
+#menu-item-restart {
+  border:none;
+font-weight: bold;
+}
+
+#story-title {
+font-family: 'Poppins', cursive;
+  font-weight: bold;
+font-size: 30px;
+
+}
+
+#story-subtitle {
+font-family: 'VT323', cursive;
+font-size: 24px;
+
+}
+
+#story-banner {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.rainbow-border{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}
 
 #ui-dialog-body {
 font-family: 'VT323', cursive;
@@ -153,15 +209,6 @@ opacity: 80%;
   font-size: 16px;
 }
 
-#ui-bar {
-  	background-color: rgba(0, 0, 0, 0);
-}
-
-#menu-item-saves {
-}
-
-#menu-item-restart {
-}
 
 /* hide scrollbar but allow scrolling */
 .kitchenmap {
@@ -207,9 +254,6 @@ opacity: 80%;
 }
 /* end start button style */
 
-#story-title {
-  font-family: 'Poppins', sans-serif;
-}
 
 body{
   min-height: 100vh;
@@ -252,6 +296,22 @@ body{
     opacity: 100%;
 }
 
+.results {
+      font-family: 'VT323', sans-serif;
+  font-size: 22px;
+	color: black;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 8px 8px 8px 8px;
+    box-shadow: 5px 5px 3px pink;
+	background-color: #ffe3e8;
+    opacity: 98%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
 .laptop {
     font-family: 'VT323', sans-serif;
   	font-size: 22px;
@@ -266,6 +326,7 @@ body{
   align-items:flex-start;
  justify-content:space-around;
     column-gap: 30px;
+    flex-wrap: wrap;
 }
 
 /* speech macro - Start */
@@ -322,7 +383,7 @@ hr {
 }
 
 .kat {
-	background-color: #C8A2C8 ;
+	background-color: #FDDAFD ;
   box-shadow: 5px 5px 3px purple;
 }
 .kat .avatar {
@@ -626,27 +687,25 @@ body.pass {
 }
 
 body.characters {
-	background-image: url('img/characters-be.png');
+	background-image: url('img/volunteers.jpg');
 	background-attachment: fixed;
   	background-size: cover;
 }
 
 body.calm {
-	background-image: url('img/starthome.png');
+	background-image: url('img/start.png');
 	background-attachment: fixed;
-  	background-size: contain;
+  	background-size: cover;
 }
 
 body.kitchen {
-	background-image: url('img/kitchen2.jpg');
+	background-image: url('img/mosaic.jpg');
 	background-attachment: fixed;
   	background-size: cover;
-  background-repeat: no-repeat;
-
 }
 
 body.mkspace {
-	background-image: url('img/mkspace.jpg');
+	background-image: url('img/makerspace.jpg');
 	background-attachment: fixed;
   	background-size: cover;
 }
@@ -677,6 +736,7 @@ body.news {
 	height: 300px;
 	width: 260px;
 	margin: 10% auto 0;
+  background:black;
 }
 
 .w{
@@ -1102,8 +1162,10 @@ section.memory-game {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  height: 100vh;
+  height: 90vh;
   display: flex;
+  justify-content: center;
+align-content: start;
 }
 
 .memory-game {
@@ -1118,7 +1180,7 @@ section.memory-game {
 .memory-card {
   width: calc(25% - 10px);
   height: calc(23.333% - 10px);
-  margin: 1px;
+  margin-bottom: 50px;
   position: relative;
   transform: scale(1);
   transform-style: preserve-3d;
@@ -1144,6 +1206,8 @@ section.memory-game {
   border-radius: 5px;
   background: #1C7CCC;
   backface-visibility: hidden;
+  border: thick double #32a1ce;
+
 }
 
 .front-face {
@@ -1617,6 +1681,137 @@ Macro.add("hovertip", {
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
 // end meters.min.js
 
+if (document.location.href.toLowerCase().includes("/temp/") || document.location.href.toLowerCase().includes("/private/") || hasOwnProperty.call(window, "storyFormat")) {
+	// Change this to the path where the HTML file is
+	// located if you want to run this from inside Twine.
+	setup.Path = "C:/Games/Twine_Sample_Code/";  // Running inside Twine application
+} else {
+	setup.Path = "";  // Running in a browser
+}
+setup.SoundPath = setup.Path + "sounds/";
+
+// Volume Slider, by Chapel; for SugarCube 2
+// version 1.2.0 (modified by HiEv)
+// For custom CSS for slider use: http://danielstern.ca/range.css/#/
+
+/*
+	Changelog:
+	v1.2.0:
+		- Fixed using/storing the current volume level in the settings.
+	v1.1.0:
+		- Fixed compatibility issues with SugarCube version 2.28 (still
+		  compatible with older versions, too).
+		- Added settings API integration for SugarCube 2.26.
+		- Internal improvements and greater style consistency with my
+		  other work.
+		- Added a pre-minified version.
+		- By default, the slider is now more granular than before
+		  (101 possible positions vs 11). Change the 'current' and
+		  'rangeMax' options to 10 to restore the old feel.
+*/
+
+(function () {
+	// Set initial values.
+	var options = {
+		current  : 50,  // Default volume level.
+		rangeMax : 100,
+		step	 : 1,
+		setting  : true
+	};
+	Setting.load();
+	if (options.setting && settings.volume) {
+		options.current = parseInt(settings.volume);
+	}
+	var vol = {
+		last: options.current,
+		start: (options.current / options.rangeMax).toFixed(2)
+	};
+
+	// Function to update the volume level.
+	function setVolume (val) {
+		if (typeof val !== 'number') val = Number(val);
+		if (Number.isNaN(val) || val < 0) val = 0;
+		if (val > 1) val = 1;
+		options.current = Math.round(val * options.rangeMax);
+		if (options.setting) {
+			settings.volume = options.current;
+			Setting.save();
+		}
+		if ($('input[name=volume]').val() != options.current) {
+			$('input[name=volume]').val(options.current);
+		}
+		try {
+			if (SimpleAudio) {
+				if (typeof SimpleAudio.volume === 'function') {
+					SimpleAudio.volume(val);
+				} else {
+					SimpleAudio.volume = val;
+				}
+				return val;
+			} else {
+				throw new Error('Cannot access audio API.');
+			}
+		} catch (err) {
+			// Fall back to the wikifier if we have to.
+			console.error(err.message, err);
+			$.wiki('<<masteraudio volume ' + val + '>>');
+			return val;
+		}
+	}
+
+	// Fix the initial volume level display.
+	postdisplay['volume-task'] = function (taskName) {
+		delete postdisplay[taskName];
+		setVolume(vol.start);
+	};
+
+	// Grab volume level changes from the volume slider.
+	$(document).on('input', 'input[name=volume]', function() {
+		var change = parseInt($('input[name=volume]').val());
+		setVolume(change / options.rangeMax);
+		vol.last = change;
+	});
+
+	// Create the <<volume>> macro.
+	Macro.add('volume', {
+		handler : function () {
+			var wrapper = $(document.createElement('span'));
+			var slider = $(document.createElement('input'));
+			var className = 'macro-' + this.name;
+			slider.attr({
+				id		: 'volume-control',
+				type	: 'range',
+				name	: 'volume',
+				min		: '0',
+				max		: options.rangeMax,
+				step	: options.step,
+				value	: options.current
+			});
+			// Class '.macro-volume' and ID '#volume-control' for styling the slider
+			wrapper.append(slider).addClass(className).appendTo(this.output);
+		}
+	});
+
+	// Add Setting API integration for SugarCube 2.26 and higher.
+	function updateVolume () {
+		setVolume(settings.volume / options.rangeMax);
+	}
+	if (options.setting) {
+		if (Setting && Setting.addRange && typeof Setting.addRange === 'function') {
+			Setting.addRange('volume', {
+				label : 'Volume: ',
+				min : 0,
+				max : options.rangeMax,
+				step : options.step,
+				default : options.current,
+				onInit : updateVolume,
+				onChange : updateVolume
+			});
+		} else {
+			console.error('This version of SugarCube does not include the `Settings.addRange()` method; please try updating to the latest version of SugarCube.');
+		}
+	}
+}());
 </script><tw-tag name="data" color="red"></tw-tag><tw-tag name="dream" color="blue"></tw-tag><tw-passagedata pid="1" name="Door" tags="" position="425,450" size="100,100">&lt;&lt;goto [[Story 1]]&gt;&gt;
 
 [[Door 1|Story 1]]
@@ -1743,8 +1938,7 @@ $doorOption</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="data"
     &lt;&lt;colors #9ccfe7 #9ccfe7  #ffffc2&gt;&gt;
 &lt;&lt;/newmeter&gt;&gt;
 </tw-passagedata><tw-passagedata pid="6" name="Q1 check" tags="calm" position="450,1950" size="100,100">&lt;&lt;if $qOneLikert is 0&gt;&gt;
-&lt;div class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!
-[[Go back|Q1d]]&lt;/div&gt;
+&lt;div class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! [[Go back|Q1d]]&lt;/div&gt;
 &lt;&lt;elseif $stickerOne is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;
 \
@@ -1755,22 +1949,18 @@ $doorOption</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="data"
 &lt;&lt;set $stickerOne to true&gt;&gt;\
 &lt;&lt;set $questionsCount.pushUnique(&quot;answer1&quot;)&gt;&gt;\
 &lt;div class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;Hey, you got a [[new sticker|Passport]] for your laptop! You will get new ones every time you answer complete questions.&lt;/div&gt;
-&lt;div class=&quot;challenges&quot;  style=&quot;text-align:center&quot;&gt; &lt;--  You can always check them by looking at your laptop, using the sidebar on the left &lt;/div&gt;
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.2&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
 
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="7" name="StoryCaption" tags="data" position="2300,100" size="100,100">&lt;&lt;if $start is true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="7" name="StoryCaption" tags="data" position="2300,100" size="100,100">&lt;&lt;if $start is true&gt;&gt;\
+Volume: &lt;&lt;volume&gt;&gt;
 
 &lt;div class=&quot;challenges&quot;&gt;\
 &lt;span style=&quot;font-size: 50px;&quot;&gt;🌟&lt;/span&gt;
 $starsCount / 13
-&lt;/div&gt;
-
-&lt;&lt;/if&gt;&gt;
-
-
-</tw-passagedata><tw-passagedata pid="8" name="Coin1" tags="kitchen" position="450,1100" size="100,100">&lt;&lt;if $doorOption is 1&gt;&gt;\
+&lt;/div&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="8" name="Coin1" tags="kitchen" position="450,1100" size="100,100">&lt;&lt;if $doorOption is 1&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;You fixed it!&lt;/span&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;coin1b&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;
@@ -1782,10 +1972,9 @@ $starsCount / 13
 &lt;/span&gt;
 
 &lt;&lt;audio &quot;start&quot; play&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="10" name="StoryBanner" tags="data" position="1900,100" size="100,100">&lt;img src=&quot;img\unboxing_logo.png&quot; width=&quot;50%&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="10" name="StoryBanner" tags="data" position="1900,100" size="100,100">&lt;img style=&quot;margin: &quot; class=&quot;rainbow-border&quot; src=&quot;img\unboxing_logo.png&quot; width=&quot;50%&quot;&gt;\
 </tw-passagedata><tw-passagedata pid="11" name="StorySubtitle" tags="data" position="2100,100" size="100,100">A Critical Making Game</tw-passagedata><tw-passagedata pid="12" name="StoryMenu" tags="data" position="2500,100" size="100,100">&lt;&lt;if $stickerOne&gt;&gt;\
-[[YOUR LAPTOP|Passport]]
-[[Your answers]]
+[[LAPTOP|Passport]]
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="13" name="Q1" tags="" position="450,1375" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
@@ -1900,9 +2089,11 @@ Your rating: $qThirteenLikert.
 &lt;&lt;set $downloadLikert.push(&quot;Rating13: &quot;+$qThirteenLikert)&gt;&gt;\
 &lt;&lt;set $downloadText.pushUnique(&quot;Answer13: &quot;+$qThirteen)&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
-&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="15" name="Passport" tags="pass" position="2000,300" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
+&lt;/div&gt;\
+
+</tw-passagedata><tw-passagedata pid="15" name="Passport" tags="kitchen" position="2000,300" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
-&lt;div class=&quot;challenges&quot;&gt;&lt;h4&gt;My critical maker laptop&lt;/h4&gt;\
+&lt;div class=&quot;challenges&quot;&gt;&lt;h4&gt;My critical maker laptop (&lt;&lt;return&gt;&gt;)&lt;/h4&gt;\
 &lt;div class=&quot;laptop&quot;&gt;\
 &lt;&lt;if $stickerOne and $stickerSeven and $stickerNine&gt;&gt;\
 &lt;img src=&quot;img/value-Impactful-9.png&quot; width=25%&gt;
@@ -1941,7 +2132,7 @@ Your rating: $qThirteenLikert.
 &lt;&lt;/if&gt;&gt;\
 \
 &lt;&lt;if $stickerTwo and $stickerThree and $stickerEight&gt;&gt;\
-&lt;img src=&quot;img/value-social.png width=25%&gt;
+&lt;img src=&quot;img/value-social.png&quot; width=25%&gt;
 &lt;&lt;elseif $stickerTwo and $stickerThree&gt;&gt;\
 &lt;img src=&quot;img/value-social-2.png&quot; width=25%&gt;
 &lt;&lt;elseif $stickerTwo&gt;&gt;\
@@ -1949,7 +2140,7 @@ Your rating: $qThirteenLikert.
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 \
-&lt;&lt;if $stickerFour and $stickerTen and $stickerTwelvet&gt;&gt;\
+&lt;&lt;if $stickerFour and $stickerTen and $stickerTwelve&gt;&gt;\
 &lt;img src=&quot;img/values-open.png&quot; width=25%&gt;
 &lt;&lt;elseif $stickerFour and $stickerTen&gt;&gt;\
 &lt;img src=&quot;img/values-open-2.png&quot; width=25%&gt;
@@ -1958,9 +2149,7 @@ Your rating: $qThirteenLikert.
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 &lt;/div&gt; \
-&lt;span class=&quot;challenge-questions&quot;&gt;&lt;&lt;return&gt;&gt;&lt;/span&gt;
-&lt;/div&gt;\
-</tw-passagedata><tw-passagedata pid="16" name="Story 1.2" tags="mkspace" position="725,750" size="100,100">&lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
+&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="16" name="Story 1.2" tags="mkspace" position="725,750" size="100,100">&lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;div&gt;&lt;&lt;speech &quot;Marble&quot;&gt;&gt; &quot;Were you just talking to the computer?!&quot;&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;&lt;timed 1s&gt;&gt;&lt;div class=&quot;challenges&quot;&gt; She looks a little concerned. &lt;/div&gt;&lt;&lt;/timed&gt;&gt;
@@ -2179,8 +2368,7 @@ Oh no, the coffee machine is broken! &lt;/div&gt;
 &lt;&lt;if $doorOption is 1&gt;&gt;\
 &lt;&lt;include [[zine]]&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="25" name="Q2 check" tags="calm" position="725,1775" size="100,100">&lt;&lt;if $qTwoLikert is 0&gt;&gt;\
-&lt;div class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!
-[[Go back|Q2final]]&lt;/div&gt;
+&lt;div class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! [[Go back|Q2final]]&lt;/div&gt;
 &lt;&lt;elseif $stickerTwo is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
 &lt;&lt;else&gt;&gt;\
@@ -2304,7 +2492,7 @@ Sorry, Jargon 4 is not &quot;&lt;i&gt;$Jargon4&lt;/i&gt;&quot;\
 </tw-passagedata><tw-passagedata pid="31" name="FINAL" tags="calm" position="3650,2350" size="100,100">&lt;&lt;audio &quot;win&quot; play&gt;&gt;\
 
 &lt;span class=&quot;end-screen&quot;&gt;⋆ ✢ ✣  ✦ ✧ ✤ ✥ ✦ ✧  ✦ ✧  ✦ ✧  ✦ ✧  ✦ ✧ ✩ ✪ ✫ ✬ ✭ &lt;/span&gt;
-&lt;span class=&quot;end-screen&quot; style=&quot;text=align:center&quot;&gt;⋆ ⋆ ⋆  ⋆  ⋆ ⋆ ⋆ ⋆ CONGRATULATIONS ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ &lt;/span&gt;
+&lt;span class=&quot;end-screen&quot; style=&quot;text=align:center&quot;&gt;⋆ ⋆ ⋆  ⋆  ⋆ ⋆ ⋆ ⋆ CONGRATULATIONS!!! ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ &lt;/span&gt;
 &lt;span class=&quot;end-screen&quot;&gt;⋆ ✢ ✣ ✤ ✥ ✦  ✦ ✧  ✦ ✧  ✦ ✧  ✦ ✧ ✧ ✩ ✪ ✫ ✧  ✦ ✬ ✭ &lt;/span&gt;
 
 &lt;div class=&quot;end-screen-sub&quot;&gt;You finished the critical making game!
@@ -2334,7 +2522,7 @@ href=&quot;https://survey3.zsi.at/index.php/718517?lang=en&quot; target=_blank&g
 &lt;span class=&quot;challenges&quot;&gt;&lt;&lt;link &quot;✣ Credits ✣&quot;&gt;&gt;
 	&lt;&lt;script&gt;&gt;
 		Dialog.setup(&quot;Credits &amp; Licenses&quot;, &quot;dialog-box&quot;);
-		Dialog.wiki(&quot;&lt;u&gt;CONTENT&lt;/u&gt;&lt;br&gt;The &lt;a href=&#39;https://criticalmaking.eu&#39;&gt;Critical Making Consortium&lt;/a&gt; in collaboration with global makers&lt;br&gt;&lt;br&gt;&lt;u&gt;GAME DESIGN &amp; DEVELOPMENT&lt;/u&gt;&lt;br&gt;Julieta Arancio using &lt;a href=&#39;https://twinery.org&#39;&gt;Twine - Sugarcube 2.0&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;u&gt;ART&lt;/u&gt;&lt;br&gt;All backgrounds by Julieta Arancio, except for news background by &lt;a href=&#39;https://pixabay.com/users/mih83-464187&#39;&gt;M. H.&lt;/a&gt;, characters by &lt;a href=&#39;https://opengameart.org/content/green-cap-character-16x18&#39;&gt;isaiah658&lt;/a&gt; and &lt;a href=&#39;https://commons.wikimedia.org/wiki/File:Pixel_art_portrait_of_a_cat.png&#39;&gt;ReffPixels&lt;/a&gt; and laptop &#39;stickers&#39; by Nidhi Mittal.&lt;br&gt;&lt;br&gt;&lt;u&gt;MUSIC&lt;/u&gt;&lt;br&gt;Sound effects from &lt;a href=&#39;https://pixabay.com&#39;&gt;Pixabay&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;&lt;img style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/88x31.png&#39;/&gt;&lt;/a&gt;&lt;br&gt;This work is licensed under a &lt;a href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;img src=img/eulogo.png width=60% align=right&gt;&quot;);
+		Dialog.wiki(&quot;&lt;u&gt;CONTENT&lt;/u&gt;&lt;br&gt;The &lt;a href=&#39;https://criticalmaking.eu&#39;&gt;Critical Making Consortium&lt;/a&gt; in collaboration with global makers&lt;br&gt;&lt;br&gt;&lt;u&gt;GAME DESIGN &amp; DEVELOPMENT&lt;/u&gt;&lt;br&gt;Julieta Arancio using &lt;a href=&#39;https://twinery.org&#39;&gt;Twine - Sugarcube 2.0&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;u&gt;ART&lt;/u&gt;&lt;br&gt;Backgrounds: &lt;a href=&#39;https://commons.wikimedia.org/wiki/User:Stadtbibliothek_Neuss&#39;&gt;Makerspace Stadtbibliothek Neuss&lt;/a&gt;, &lt;a href=&#39;https://commons.wikimedia.org/wiki/File:Kitchen_(364514277).jpg&#39;&gt;MindMatrix&lt;/a&gt;, &lt;a href=&#39;https://www.flickr.com/people/39415781@N06&#39;&gt;Ell Brown&lt;/a&gt;, &lt;a href=&#39;https://www.peakpx.com&#39;&gt;PeakPx&lt;/a&gt;, &lt;a href=&#39;https://pixabay.com/users/mih83-464187&#39;&gt;M. H.&lt;/a&gt;. &lt;br&gt;Characters by &lt;a href=&#39;https://opengameart.org/content/green-cap-character-16x18&#39;&gt;isaiah658&lt;/a&gt; and &lt;a href=&#39;https://commons.wikimedia.org/wiki/File:Pixel_art_portrait_of_a_cat.png&#39;&gt;ReffPixels&lt;/a&gt;.&lt;br&gt;Laptop &#39;stickers&#39; by Nidhi Mittal.&lt;br&gt;&lt;br&gt;&lt;u&gt;MUSIC&lt;/u&gt;&lt;br&gt;Sound effects by &lt;a href=&#39;https://pixabay.com&#39;&gt;Pixabay&lt;/a&gt;; music by &lt;a href=&#39;https://pixabay.com/users/lofi_hour-28600719&#39;&gt;LoFi Hour&lt;/a&gt;.&lt;br&gt;&lt;br&gt;&lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;&lt;img style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/88x31.png&#39;/&gt;&lt;/a&gt;&lt;br&gt;This work is licensed under a &lt;a href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;img src=img/eulogo.png width=60% align=right&gt;&quot;);
 		Dialog.open();
 	&lt;&lt;/script&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/span&gt;
@@ -2362,7 +2550,7 @@ href=&quot;https://survey3.zsi.at/index.php/718517?lang=en&quot; target=_blank&g
 &lt;&lt;set $spiderSocial to $qTwoLikertINT + $qThreeLikertINT +$qEightLikertINT&gt;&gt;\
 &lt;&lt;set $spiderOpen to $qThreeLikertINT + $qFiveLikertINT +$qEightLikertINT&gt;&gt;\
 
-&lt;div class=&quot;challenges&quot;&gt;\
+&lt;div class=&quot;results&quot;&gt;\
 Your score on Impactful making is $spiderImpactful / 9! &lt;&lt;showmeter &#39;impactfulBar&#39; `$spiderImpactful / 9`&gt;&gt;\
 Your score on Joyful &amp; meaningful making is $spiderJoyful / 9! &lt;&lt;showmeter &#39;joyfulBar&#39; `$spiderJoyful / 9`&gt;&gt;\
 Your score on Local &amp; connected making is $spiderLocal / 9! &lt;&lt;showmeter &#39;localBar&#39; `$spiderLocal / 9`&gt;&gt;\
@@ -2476,6 +2664,7 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 &lt;&lt;speech &quot;Granite&quot;&gt;&gt;This project is getting tough...&lt;&lt;/speech&gt;&gt;
 
 &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;Marble&quot;&gt;&gt;I just called [[my friend Sam|story1.8b]], they work in design. I&#39;m sure they can help.&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Story 1.9" tags="characters" position="2500,1675" size="100,100">&lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
+&lt;&lt;audio &quot;voices&quot; play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Today&#39;s special: everyone is at the school testing the devices!&lt;/span&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;story1.9b&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Story 1.10" tags="mkspace" position="2725,1800" size="100,100">&lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
@@ -3310,8 +3499,8 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
     &lt;&lt;include [[Q4final]]&gt;&gt;
     &lt;&lt;/typesim&gt;&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Q4 check" tags="calm" position="1125,2225" size="100,100">&lt;&lt;if $qFourLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt; &lt;/span&gt;
+
 
 &lt;&lt;elseif $stickerFour is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -3393,8 +3582,7 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
     &lt;&lt;include [[Q5final]]&gt;&gt;
     &lt;&lt;/typesim&gt;&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Q5 check" tags="calm" position="1400,2250" size="100,100">&lt;&lt;if $qFiveLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!&lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt; &lt;/span&gt;
 
 &lt;&lt;elseif $stickerFive is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -3446,12 +3634,12 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 Do you want [[some coffee|challenge1]]?&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="71" name="challenge1b" tags="" position="450,875" size="100,100">&lt;div class=&quot;challenges&quot;&gt;Can you gather the necessary items to repair the coffee machine?&lt;/div&gt;\
-&lt;div class=&quot;kitchenmap&quot;&gt;&lt;img src=&quot;img/kitchen2.jpg&quot; usemap=&quot;#image-map&quot; &gt;\&lt;/div&gt;\
+</tw-passagedata><tw-passagedata pid="71" name="challenge1b" tags="kitchen" position="450,875" size="100,100">&lt;div class=&quot;challenges&quot;&gt;Can you gather the necessary items to repair the coffee machine?&lt;/div&gt;
+&lt;img class=&quot;rainbow-border&quot; src=&quot;img/kitchen.jpg&quot; usemap=&quot;#image-map&quot;&gt;
 &lt;map name=&quot;image-map&quot;&gt;\
-    &lt;area alt=&quot;&quot; title=&quot;&quot; coords=&quot;175,494,267,596&quot; shape=&quot;rect&quot; data-passage=&quot;pressChecker&quot;&gt;\
-    &lt;area alt=&quot;&quot; title=&quot;&quot; coords=&quot;210,27,211,78,257,77,257,29&quot; shape=&quot;poly&quot; data-passage=&quot;beanCheck&quot;&gt;\
-    &lt;area alt=&quot;&quot; title=&quot;&quot; coords=&quot;553,290,29&quot; shape=&quot;circle&quot; data-passage=&quot;grinderChecker&quot;&gt;\
+    &lt;area alt=&quot;&quot; title=&quot;&quot; coords=&quot;476,468,475,497,529,521,532,482&quot;  shape=&quot;poly&quot; data-passage=&quot;pressChecker&quot;&gt;\
+    &lt;area alt=&quot;&quot; title=&quot;&quot; coords=&quot;920,452,922,487,955,485,960,463&quot; shape=&quot;poly&quot; data-passage=&quot;beanCheck&quot;&gt;\
+    &lt;area alt=&quot;&quot; title=&quot;&quot; coords=&quot;410,148,479,329&quot; shape=&quot;rect&quot; data-passage=&quot;grinderChecker&quot;&gt;\
     &lt;/map&gt;\</tw-passagedata><tw-passagedata pid="72" name="preQ1" tags="" position="450,1250" size="100,100">&lt;&lt;audio &quot;mistery&quot; play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;But while you think how good you&#39;re at making coffee, a &lt;span class=&quot;macro-type&quot;&gt;[[green glow|Q1]]&lt;/span&gt; catches your eye...&lt;/span&gt;
 
@@ -3537,8 +3725,7 @@ If you need a hint, read the instructions *very* carefully :)
 &lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qSix&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
 
 [[Let&#39;s keep moving|Q6check]]</tw-passagedata><tw-passagedata pid="86" name="Q6check" tags="calm" position="1700,2425" size="100,100">&lt;&lt;if $qSixLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!&lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerSix is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -3604,8 +3791,7 @@ Project D affects biodiversity&lt;/div&gt;
 &lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qSeven&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
 
 [[Let&#39;s keep moving|Q7check]]</tw-passagedata><tw-passagedata pid="93" name="Q7check" tags="calm" position="1925,2400" size="100,100">&lt;&lt;if $qSevenLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!&lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerSeven is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -3676,8 +3862,7 @@ The only door wide enough for a wheelchair is locked&lt;/div&gt;
 
 [[Got it|Q8 check]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="Q8 check" tags="calm" position="2200,2550" size="100,100">&lt;&lt;if $qEightLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!&lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerEight is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -3706,7 +3891,8 @@ The only door wide enough for a wheelchair is locked&lt;/div&gt;
 &lt;span class=&quot;macro-type&quot;&gt; How could we work on these?&lt;/span&gt;
 &lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qEight&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
 
-[[Got it|Q8 check]]</tw-passagedata><tw-passagedata pid="101" name="story1.9b" tags="characters" position="2500,1800" size="100,100">&lt;&lt;speech &quot;Marble&quot;&gt;&gt;So, we all tested the devices, they work.
+[[Got it|Q8 check]]</tw-passagedata><tw-passagedata pid="101" name="story1.9b" tags="characters" position="2500,1800" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
+&lt;&lt;speech &quot;Marble&quot;&gt;&gt;So, we all tested the devices, they work.
 Let&#39;s relax now. Any question for our friends at the makerspace?&lt;&lt;/speech&gt;&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;story1.9c&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="story1.9c" tags="characters" position="2500,1900" size="100,100">&lt;&lt;speech &quot;Aplite&quot;&gt;&gt;Well, sorry to put it this way but we just met a couple of days ago. How can we really trust you?&lt;&lt;/speech&gt;&gt;
@@ -3773,8 +3959,7 @@ Step 3. Read through the story and find the key word&lt;/div&gt;
 [[Got it|Q9 check]]
 &lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="109" name="Q9 check" tags="calm" position="2500,2775" size="100,100">&lt;&lt;if $qNineLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!&lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerNine is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -3794,56 +3979,52 @@ Step 3. Read through the story and find the key word&lt;/div&gt;
 &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;I doubt the city can give us money [[though|prechallenge10]]!&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="prechallenge10" tags="mkspace" position="2725,2050" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;There is no much time to decide and lots of things to do!&lt;/span&gt;
 
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge10&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="challenge10" tags="mkspace" position="2725,2175" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Can you help the team choose between their support options?!&lt;/span&gt;
-
-&lt;section class=&quot;memory-game&quot;&gt;
-    &lt;div class=&quot;memory-card&quot; data-framework=&quot;universities&quot;&gt;\
-      &lt;img class=&quot;front-face&quot; src=&quot;img/cards1.png&quot; alt=&quot;University&quot; /&gt;\
-      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Credibility &amp; Visibility&quot; /&gt;\
-    &lt;/div&gt;\
-    &lt;div class=&quot;memory-card&quot; data-framework=&quot;universities&quot;&gt;\
-      &lt;img class=&quot;front-face&quot; src=&quot;img/cards1.png&quot; alt=&quot;University&quot; /&gt;\
-      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Credibility &amp; Visibility&quot; /&gt;\
-    &lt;/div&gt;\
-    &lt;div class=&quot;memory-card&quot; data-framework=&quot;City council&quot;&gt;\
-      &lt;img class=&quot;front-face&quot; src=&quot;img/cards2.png&quot; alt=&quot;City council&quot; /&gt;\
-      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Networking &amp; Legislation&quot; /&gt;\
-    &lt;/div&gt;\
-    &lt;div class=&quot;memory-card&quot; data-framework=&quot;City council&quot;&gt;\
-      &lt;img class=&quot;front-face&quot; src=&quot;img/cards2.png&quot; alt=&quot;City council&quot; /&gt;\
-      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Networking &amp; Legislation&quot; /&gt;\
-    &lt;/div&gt;\
-    &lt;div class=&quot;memory-card&quot; data-framework=&quot;Local companies&quot;&gt;\
-      &lt;img class=&quot;front-face&quot; src=&quot;img/cards3.png&quot; alt=&quot;Local companies&quot; /&gt;\
-      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Sponsoring&quot; /&gt;\
-    &lt;/div&gt;\
-    &lt;div class=&quot;memory-card&quot; data-framework=&quot;Local companies&quot;&gt;\
-      &lt;img class=&quot;front-face&quot; src=&quot;img/cards3.png&quot; alt=&quot;Local companies&quot; /&gt;\
-      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Sponsoring&quot; /&gt;\
-    &lt;/div&gt;\
-    &lt;div class=&quot;memory-card&quot; data-framework=&quot;Non profit organization&quot;&gt;\
-      &lt;img class=&quot;front-face&quot; src=&quot;img/cards4.png&quot; alt=&quot;Non profit organization&quot; /&gt;\
-      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Advocacy&quot; /&gt;\
-    &lt;/div&gt;\
-    &lt;div class=&quot;memory-card&quot; data-framework=&quot;Non profit organization&quot;&gt;\
-      &lt;img class=&quot;front-face&quot; src=&quot;img/cards4.png&quot; alt=&quot;Non profit organization&quot; /&gt;\
-      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Advocacy&quot; /&gt;\
-    &lt;/div&gt;\
-  &lt;/section&gt;
-
-&lt;span class=&quot;challenges&quot;&gt;Which partners would you choose to ask for support for this project?&lt;/span&gt;
+&lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge10&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="challenge10" tags="mkspace" position="2725,2175" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Which partners would you choose to ask for support for this project?&lt;/span&gt;
 
 &lt;div class=&quot;challenges&quot;&gt;\
 &lt;&lt;radiobutton &quot;$support1&quot; &quot;academia&quot;&gt;&gt; Academia
-&lt;&lt;radiobutton &quot;$support1&quot; &quot;government&quot;&gt;&gt; Policy
+&lt;&lt;radiobutton &quot;$support1&quot; &quot;government&quot;&gt;&gt; City Council
 &lt;&lt;radiobutton &quot;$support1&quot; &quot;NGOs&quot;&gt;&gt; Civil society organizations
-&lt;&lt;radiobutton &quot;$support1&quot; &quot;companies&quot;&gt;&gt; Companies
+&lt;&lt;radiobutton &quot;$support1&quot; &quot;companies&quot;&gt;&gt; Local companies
+
+👇🏾 Match them below before [[moving on|challenge10check]]!
 &lt;/div&gt;
 
-&lt;span class=&quot;challenges&quot;&gt;[[Let&#39;s go!|challenge10check]]&lt;/span&gt;
+&lt;section class=&quot;memory-game&quot;&gt;\
+    &lt;div class=&quot;memory-card&quot; data-framework=&quot;universities&quot;&gt;\
+      &lt;img class=&quot;front-face&quot; src=&quot;img/cards1.png&quot; alt=&quot;University&quot; /&gt;\
+      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Credibility &amp; Visibility&quot; /&gt;\
+    &lt;/div&gt;\
+    &lt;div class=&quot;memory-card&quot; data-framework=&quot;universities&quot;&gt;\
+      &lt;img class=&quot;front-face&quot; src=&quot;img/cards1.png&quot; alt=&quot;University&quot; /&gt;\
+      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Credibility &amp; Visibility&quot; /&gt;\
+    &lt;/div&gt;\
+    &lt;div class=&quot;memory-card&quot; data-framework=&quot;City council&quot;&gt;\
+      &lt;img class=&quot;front-face&quot; src=&quot;img/cards2.png&quot; alt=&quot;City council&quot; /&gt;\
+      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Networking &amp; Legislation&quot; /&gt;\
+    &lt;/div&gt;\
+    &lt;div class=&quot;memory-card&quot; data-framework=&quot;City council&quot;&gt;\
+      &lt;img class=&quot;front-face&quot; src=&quot;img/cards2.png&quot; alt=&quot;City council&quot; /&gt;\
+      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Networking &amp; Legislation&quot; /&gt;\
+    &lt;/div&gt;\
+    &lt;div class=&quot;memory-card&quot; data-framework=&quot;Local companies&quot;&gt;\
+      &lt;img class=&quot;front-face&quot; src=&quot;img/cards3.png&quot; alt=&quot;Local companies&quot; /&gt;\
+      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Sponsoring&quot; /&gt;\
+    &lt;/div&gt;\
+    &lt;div class=&quot;memory-card&quot; data-framework=&quot;Local companies&quot;&gt;\
+      &lt;img class=&quot;front-face&quot; src=&quot;img/cards3.png&quot; alt=&quot;Local companies&quot; /&gt;\
+      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Sponsoring&quot; /&gt;\
+    &lt;/div&gt;\
+    &lt;div class=&quot;memory-card&quot; data-framework=&quot;Non profit organization&quot;&gt;\
+      &lt;img class=&quot;front-face&quot; src=&quot;img/cards4.png&quot; alt=&quot;Non profit organization&quot; /&gt;\
+      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Advocacy&quot; /&gt;\
+    &lt;/div&gt;\
+    &lt;div class=&quot;memory-card&quot; data-framework=&quot;Non profit organization&quot;&gt;\
+      &lt;img class=&quot;front-face&quot; src=&quot;img/cards4.png&quot; alt=&quot;Non profit organization&quot; /&gt;\
+      &lt;img class=&quot;back-face&quot; src=&quot;img/logo.png&quot; alt=&quot;Advocacy&quot; /&gt;\
+    &lt;/div&gt; &lt;/section&gt;\
 
-
-  &lt;script&gt;
+&lt;script&gt;
   /*Memory game*/
 const cards = document.querySelectorAll(&#39;.memory-card&#39;);
 
@@ -3906,12 +4087,7 @@ function resetBoard() {
 
 cards.forEach(card =&gt; card.addEventListener(&#39;click&#39;, flipCard));
 /*end memory game*/
-  &lt;/script&gt;</tw-passagedata><tw-passagedata pid="113" name="challenge10check" tags="mkspace" position="2725,2300" size="100,100">&lt;&lt;if $support1 is not 0&gt;&gt;
-&lt;&lt;goto [[Coin10]]&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;&lt;audio &quot;nop&quot; play&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;You have to choose an option. [[Try again!|challenge10]]&lt;/span&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Coin10" tags="" position="2725,2425" size="100,100">&lt;&lt;if visited() is 1&gt;&gt;
+  &lt;/script&gt;</tw-passagedata><tw-passagedata pid="113" name="challenge10check" tags="mkspace" position="2725,2300" size="100,100">&lt;&lt;goto [[Coin10]]&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Coin10" tags="" position="2725,2425" size="100,100">&lt;&lt;if visited() is 1&gt;&gt;
 	&lt;&lt;set $starsCount += 1&gt;&gt;\
 &lt;&lt;notify&gt;&gt;🌟 You earned a star!&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;audio &quot;coin2&quot; play&gt;&gt;\
@@ -3942,8 +4118,7 @@ Can you think of different resources for supporting your vision?&lt;/span&gt;
 
 [[Got it|Q10 check]]
 </tw-passagedata><tw-passagedata pid="116" name="Q10 check" tags="calm" position="2725,2675" size="100,100">&lt;&lt;if $qTenLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!&lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerTen is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -4013,8 +4188,7 @@ What&#39;s your experience “future-proofing” your projects – meaning that 
 
 [[Got it|Q11 check]]
 </tw-passagedata><tw-passagedata pid="123" name="Q11 check" tags="calm" position="2950,2825" size="100,100">&lt;&lt;if $qElevenLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!&lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerEleven is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -4022,7 +4196,7 @@ What&#39;s your experience “future-proofing” your projects – meaning that 
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
-&lt;&lt;set $stickerTen to true&gt;&gt;\
+&lt;&lt;set $stickerEleven to true&gt;&gt;\
 &lt;&lt;set $questionsCount.pushUnique(&quot;answer11&quot;)&gt;&gt;\
 
 &lt;span class=&quot;challenges&quot;&gt;Another [[sticker|Passport]] for your laptop!?&lt;/span&gt;
@@ -4052,9 +4226,8 @@ ___ ___ ___ ___ ___ ___ (6)
 &lt;/div&gt;\
 
 
-&lt;&lt;textboxPlus &quot;puzzle12&quot; &quot;$puzzle12&quot; `{ maxlength: 18}`&gt;&gt;
-
-&lt;span class=&quot;challenges&quot;&gt;[[Check it!|challenge12check]]&lt;/span&gt;
+&lt;div class=&quot;challenges&quot;&gt;&lt;&lt;textboxPlus &quot;puzzle12&quot; &quot;$puzzle12&quot; `{ maxlength: 18}`&gt;&gt;
+[[Check it!|challenge12check]]&lt;/div&gt;
 
 
 </tw-passagedata><tw-passagedata pid="127" name="Coin12" tags="" position="3175,2675" size="100,100">&lt;&lt;if visited() is 1&gt;&gt;
@@ -4092,8 +4265,7 @@ ___ ___ ___ ___ ___ ___ (6)
 
 [[Got it|Q12 check]]
 </tw-passagedata><tw-passagedata pid="130" name="Q12 check" tags="calm" position="3175,2925" size="100,100">&lt;&lt;if $qTwelveLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!&lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerTwelve is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -4107,7 +4279,8 @@ ___ ___ ___ ___ ___ ___ (6)
 &lt;span class=&quot;challenges&quot;&gt;Your laptop must be full of [[stickers|Passport]] by now!&lt;/span&gt;
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.13&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="131" name="story1.13b" tags="mkspace" position="3375,2150" size="100,100">&lt;&lt;speech &quot;You&quot;&gt;&gt;Hey, remember that journalist that visited a week ago? His article is now published, let&#39;s [[take a look|article13]]!&lt;&lt;/speech&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="story1.13c" tags="mkspace" position="3375,2400" size="100,100">&lt;&lt;speech &quot;Granite&quot;&gt;&gt;This is terrible! I&#39;m never giving an interview again!&lt;&lt;/speech&gt;&gt;
+</tw-passagedata><tw-passagedata pid="131" name="story1.13b" tags="mkspace" position="3375,2150" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
+&lt;&lt;speech &quot;You&quot;&gt;&gt;Hey, remember that journalist that visited a week ago? His article is now published, let&#39;s [[take a look|article13]]!&lt;&lt;/speech&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="story1.13c" tags="mkspace" position="3375,2400" size="100,100">&lt;&lt;speech &quot;Granite&quot;&gt;&gt;This is terrible! I&#39;m never giving an interview again!&lt;&lt;/speech&gt;&gt;
 
 &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;People in the community will think we [[actually believe|prechallenge13]] this...&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="133" name="prechallenge13" tags="characters" position="3375,2525" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
 &lt;&lt;speech &quot;Marble&quot;&gt;&gt;So we are the helpless ones, when we started this project...!&lt;&lt;/speech&gt;&gt;
@@ -4155,8 +4328,7 @@ ___ ___ ___ ___ ___ ___ (6)
 
 [[Got it|Q13 check]]
 </tw-passagedata><tw-passagedata pid="138" name="Q13 check" tags="calm" position="3375,3150" size="100,100">&lt;&lt;if $qThirteenLikert is 0&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on!&lt;/span&gt;
-&lt;&lt;return&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerThirteen is true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
@@ -4208,12 +4380,13 @@ This coffee smells amazing!&quot;&lt;&lt;/speech&gt;&gt;
      &lt;&lt;include [[epilogueb]]&gt;&gt;
 &lt;&lt;/typesim&gt;&gt;
 </tw-passagedata><tw-passagedata pid="149" name="epilogueb" tags="" position="3525,2175" size="100,100">&lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
-&lt;&lt;audio &quot;mistery&quot; play&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;Go ahead! And feel free to share with us how your critical making journey is going :)&lt;&lt;/type&gt;&gt;
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
-&lt;&lt;typesim &quot;thank you :) but I never got to ask your [[name|FINAL]]...&quot;&gt;&gt;
+&lt;&lt;typesim &quot;thank you :) you&#39;ve been really helpful...&quot;&gt;&gt;
+&lt;span class=&quot;challenges&quot;&gt;You are about to ask your new friend&#39;s name, but [[suddenly|FINAL]]... &lt;/span&gt;
 &lt;&lt;/typesim&gt;&gt;
+
 </tw-passagedata><tw-passagedata pid="150" name="prechallenge4" tags="" position="1125,1525" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
 &lt;&lt;timed 1s t8n&gt;&gt;&lt;span class=&quot;challenges&quot;&gt; This is getting  [[confusing|challenge4]] very fast...&lt;/span&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
