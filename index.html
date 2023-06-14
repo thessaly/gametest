@@ -4,6 +4,10 @@
 <meta charset="UTF-8" />
 <title>Unboxing!</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Critical Making game">
+<meta name="twitter:description" content="Solve the challenges to unbox your own assumptions about making :)">
+<meta name="twitter:image" content="img/unboxing_logo.png">
 <!--
 
 SugarCube (v2.36.1): A free (gratis and libre) story format.
@@ -58,7 +62,7 @@ h(Math,"acosh",Cr.acosh,Math.acosh(Number.MAX_VALUE)===Infinity);h(Math,"acosh",
 /*
  * jQuery throttle / debounce - v1.1 - 3/7/2010
  * http://benalman.com/projects/jquery-throttle-debounce-plugin/
- * 
+ *
  * Copyright (c) 2010 "Cowboy" Ben Alman
  * Dual licensed under the MIT and GPL licenses.
  * http://benalman.com/about/license/
@@ -163,7 +167,7 @@ opacity: 80%;
 .kitchenmap {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll; 
+  overflow-y: scroll;
 }
 
 .kitchenmap::-webkit-scrollbar {
@@ -225,7 +229,7 @@ body{
 }
 
 #passage-coffee {
- background-image: "img/kitchen.jpg"; 
+ background-image: "img/kitchen.jpg";
 }
 
 .challenges {
@@ -468,27 +472,27 @@ body.single-background {
 
 
 /* Coffee challenge */
-#french { 
+#french {
     visibility:visible;
 }
 
-#french.active { 
+#french.active {
     visibility:hidden;
 }
 
-#grinder { 
+#grinder {
     visibility:visible;
 }
 
-#grinder.active { 
+#grinder.active {
     visibility:hidden;
 }
 
-#beans { 
+#beans {
     visibility:visible;
 }
 
-#beans.active { 
+#beans.active {
     visibility:hidden;
 }
 
@@ -570,7 +574,7 @@ body.single-background {
 
 body.terminalbg {
   background-image: url("");
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover; /* maybe contain, based on the image and goals */
 }
@@ -979,7 +983,7 @@ input#s_9_12:checked ~label[rel="p-9-12"], input#s_10_12:checked ~label[rel="p-1
 /*prueba progress bar*/
 body {
   display: grid;
-  height: 100vh; 
+  height: 100vh;
   place-items: center;
 }
 
@@ -1005,7 +1009,7 @@ svg {
   stroke-linecap: round;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
-  
+
 }
 
 .meter-1 {
@@ -1119,7 +1123,7 @@ section.memory-game {
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
-  
+
 }
 
 .memory-card:active {
@@ -1149,7 +1153,7 @@ section.memory-game {
 
 /**/
 //Setup
-@import url(https://fonts.googleapis.com/css?family=Open+Sans); 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 @mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
   @while $i > 0 {
@@ -1317,11 +1321,11 @@ body {
 
 /**/
 .sticker {
- visibility: hidden; 
+ visibility: hidden;
 }
 
 .values {
- visibility: visible; 
+ visibility: visible;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.history.controls = true;
 
 Config.ui.stowBarInitially = true;
@@ -1615,15 +1619,15 @@ Macro.add("hovertip", {
 
 </script><tw-tag name="data" color="red"></tw-tag><tw-tag name="dream" color="blue"></tw-tag><tw-passagedata pid="1" name="Door" tags="" position="425,450" size="100,100">&lt;&lt;goto [[Story 1]]&gt;&gt;
 
-[[Door 1|Story 1]] 				
-[[Door 2-inactive|Story 2]] 			
+[[Door 1|Story 1]]
+[[Door 2-inactive|Story 2]]
 [[Door 3-inactive|Story 3]]
 </tw-passagedata><tw-passagedata pid="2" name="Story 1" tags="characters" position="425,575" size="100,100">&lt;&lt;set $doorOption to 1&gt;&gt;
 
 &lt;&lt;fadein 1s&gt;&gt;&lt;&lt;speech &quot;Marble&quot;&gt;&gt;
- Hi there!  I&#39;m a teacher at the water guardians community, we&#39;re next door. 
+ Hi there!  I&#39;m a teacher at the water guardians community, we&#39;re next door.
  &lt;&lt;/speech&gt;&gt;&lt;&lt;/fadein&gt;&gt;
- 
+
 &lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt; Cool, nice to meet you :) How can I [[help|Story 1b]]?&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;
 </tw-passagedata><tw-passagedata pid="3" name="Story 2" tags="" position="175,400" size="100,100">&lt;&lt;set $doorOption to 2&gt;&gt;
 $doorOption
@@ -1759,8 +1763,8 @@ $doorOption</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="data"
 </tw-passagedata><tw-passagedata pid="7" name="StoryCaption" tags="data" position="2300,100" size="100,100">&lt;&lt;if $start is true&gt;&gt;
 
 &lt;div class=&quot;challenges&quot;&gt;\
-&lt;span style=&quot;font-size: 50px;&quot;&gt;🌟&lt;/span&gt; 
-$starsCount / 13  
+&lt;span style=&quot;font-size: 50px;&quot;&gt;🌟&lt;/span&gt;
+$starsCount / 13
 &lt;/div&gt;
 
 &lt;&lt;/if&gt;&gt;
@@ -1798,7 +1802,7 @@ $starsCount / 13
     &lt;&lt;set $totalDownload to $downloadLikert + &quot;, &quot; + $downloadText + &quot;,&quot;&gt;&gt;
     &lt;&lt;export $totalDownload &#39;playerdata&#39; &#39;csv&#39;&gt;&gt;\
 &lt;&lt;/link&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\    
+&lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;return&gt;&gt;&lt;/div&gt;\
 
@@ -1980,12 +1984,12 @@ Oh no, the coffee machine is broken! &lt;/div&gt;
 &lt;img src=&quot;img/Clave2.png&quot; width=&quot;50%&quot;&gt;
 
 &lt;&lt;textboxPlus &quot;Enter code:&quot; &quot;$BoxPin&quot; `{ maxlength: 8}`&gt;&gt;
-&lt;span class=&quot;challenges&quot;&gt;[[Open the box|challenge2 check]]&lt;/span&gt;     
+&lt;span class=&quot;challenges&quot;&gt;[[Open the box|challenge2 check]]&lt;/span&gt;
 
-			
-           
-                	
-                  
+
+
+
+
   </tw-passagedata><tw-passagedata pid="20" name="textBoxPlus" tags="nobr widget" position="1500,100" size="100,100">/* &lt;&lt;textboxPlus&gt;&gt; widget v1.3 - Start */
 /* Usage:
 	&lt;&lt;textboxPlus &quot;Label: &quot; &quot;$variableName&quot; `{
@@ -2303,15 +2307,15 @@ Sorry, Jargon 4 is not &quot;&lt;i&gt;$Jargon4&lt;/i&gt;&quot;\
 &lt;span class=&quot;end-screen&quot; style=&quot;text=align:center&quot;&gt;⋆ ⋆ ⋆  ⋆  ⋆ ⋆ ⋆ ⋆ CONGRATULATIONS ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ &lt;/span&gt;
 &lt;span class=&quot;end-screen&quot;&gt;⋆ ✢ ✣ ✤ ✥ ✦  ✦ ✧  ✦ ✧  ✦ ✧  ✦ ✧ ✧ ✩ ✪ ✫ ✧  ✦ ✬ ✭ &lt;/span&gt;
 
-&lt;div class=&quot;end-screen-sub&quot;&gt;You finished the critical making game! 
+&lt;div class=&quot;end-screen-sub&quot;&gt;You finished the critical making game!
 ❤️ We hope you enjoyed it ❤️&lt;/div&gt;\
 &lt;div class=&quot;flex-buttons&quot;&gt;&lt;a class=&quot;twitter-share-button&quot;
 href=&quot;https://twitter.com/intent/tweet&quot;
   data-size=&quot;large&quot;
-  data-text=&quot;I just finished the @critical_making game! It&#39;s fun and makes you think about your own journey as a #criticalmaker. 
-  
+  data-text=&quot;I just finished the @critical_making game! It&#39;s fun and makes you think about your own journey as a #criticalmaker.
+
 How many stickers can *you* get in your laptop 💻? Give it a try! 👇
-  
+
 &quot;
   data-url=&quot;https://play.criticalmaking.eu&quot;
   &gt;
@@ -2323,7 +2327,7 @@ Share on Twitter!
 
 &lt;span class=&quot;challenges&quot;&gt;[[✣ Download your results ✣|Your answers]]&lt;/span&gt;
 
-&lt;span class=&quot;challenges&quot;&gt; &lt;a 
+&lt;span class=&quot;challenges&quot;&gt; &lt;a
 href=&quot;https://survey3.zsi.at/index.php/718517?lang=en&quot; target=_blank&gt;✥  Donate data to research &lt;/a&gt;&lt;/span&gt;
 
 
@@ -2367,7 +2371,7 @@ Your score on Social &amp; Diverse  making is $spiderSocial / 9! &lt;&lt;showmet
 Your score on Open making is $spiderOpen / 9! &lt;&lt;showmeter &#39;openBar&#39; `$spiderOpen / 9`&gt;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="33" name="Story 0" tags="calm" position="425,325" size="100,100">&lt;&lt;set $start to true&gt;&gt;\
 &lt;&lt;audio &quot;knock&quot; play&gt;&gt;\
 &lt;div class=&quot;challenges&quot;&gt;\
-&lt;&lt;say &#39;Hey there&#39;&gt;&gt;It&#39;s another typical Saturday at the makerspace. 
+&lt;&lt;say &#39;Hey there&#39;&gt;&gt;It&#39;s another typical Saturday at the makerspace.
 
 You arrived early: today you are committed to finishing *that side project*.
 
@@ -2378,7 +2382,7 @@ You&#39;re about to turn on the coffee machine when [[someone knocks at the door
 &lt;&lt;typesim &quot;Really?? Tell me more about your projects!&quot;&gt;&gt;
     &lt;&lt;cont append&gt;&gt;&lt;&lt;goto &#39;Q1c&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
     &lt;&lt;/typesim&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Q1c" tags="psicodelia" position="450,1575" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;Well, lots of cool tech experiments for sure. But also many collabs with local communities. 
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Q1c" tags="psicodelia" position="450,1575" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;Well, lots of cool tech experiments for sure. But also many collabs with local communities.
 
 It felt like we could actually change something&lt;&lt;/type&gt;&gt;
 &lt;&lt;timed 9s t8n&gt;&gt;\
@@ -2423,12 +2427,12 @@ It felt like we could actually change something&lt;&lt;/type&gt;&gt;
 &lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qTwo&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
 
 [[Got it!|Q2 check]]</tw-passagedata><tw-passagedata pid="41" name="Story1.3b" tags="mkspace" position="925,1150" size="100,100">&lt;&lt;speech &quot;Granite&quot;&gt;&gt;&quot;Welcome to the space! Here is a very good summary of my project. Let me know if you want to join!&quot;&lt;&lt;/speech&gt;&gt;\
- 
+
 &lt;section class=&quot;paper&quot;&gt;\
 	&lt;article class=&quot;paperheader&quot;&gt;&lt;/article&gt;\
 	&lt;div class=&quot;papertext&quot;&gt;Project: Smart Home Security System
-    
-&lt;img src=&quot;img/cad.png&quot; width=20%&gt; 
+
+&lt;img src=&quot;img/cad.png&quot; width=20%&gt;
 
 The Smart Home System is a hardware project designed to provide a monitoring solution for homeowners. It utilizes IoT technology to connect various smart devices to a central hub that runs a back-end software application. This software application provides an API that allows users to remotely access and control their smart devices. To ensure the security of data transmissions between the hub and the user&#39;s devices, the system employs a VPN connection.
 &lt;br&gt;
@@ -3253,11 +3257,11 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 		&lt;label rel=&quot;p-10-12&quot; class=&quot;l&quot; for=&quot;s_9_12&quot;&gt;&lt;/label&gt;
 		&lt;label rel=&quot;p-10-12&quot; class=&quot;r&quot; for=&quot;s_f&quot;&gt;&lt;/label&gt;
 		&lt;label rel=&quot;p-10-12&quot; class=&quot;b&quot; for=&quot;s_f&quot;&gt;&lt;/label&gt;
-		
+
 		&lt;div id=&quot;boy&quot;&gt;&lt;/div&gt;
 
 		&lt;div id=&quot;congratulation&quot;&gt;
-        The key is: 
+        The key is:
         LISTEN
         &lt;/div&gt;
 	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Coin4" tags="" position="1125,1825" size="100,100">&lt;&lt;if visited() is 1&gt;&gt;
@@ -3291,7 +3295,7 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 &lt;span class=&quot;macro-type&quot;&gt;\
 &lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;1&quot;&gt;&gt; Not really... I never had the chance
 &lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;2&quot;&gt;&gt; I have seen some examples but I wouldn&#39;t say a lot
-&lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;3&quot;&gt;&gt; Yes, many times 
+&lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;3&quot;&gt;&gt; Yes, many times
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
@@ -3329,7 +3333,7 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 &lt;span class=&quot;macro-type&quot;&gt;\
 &lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;1&quot;&gt;&gt; Not really... I never had the chance
 &lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;2&quot;&gt;&gt; I have seen some examples but I wouldn&#39;t say a lot
-&lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;3&quot;&gt;&gt; Yes, many times 
+&lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;3&quot;&gt;&gt; Yes, many times
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
@@ -3338,7 +3342,7 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 
 [[Got it!|Q4 check]]</tw-passagedata><tw-passagedata pid="60" name="challenge5" tags="mkspace" position="1400,1550" size="100,100">&lt;div class=&quot;challenges&quot;&gt;Find the shortest pathway between these components, using each of them at least once.&lt;/div&gt;\
 
-&lt;img src=&quot;img/pathways.jpg&quot; width=40%&gt; 
+&lt;img src=&quot;img/pathways.jpg&quot; width=40%&gt;
 
 &lt;span class=&quot;challenge-questions&quot;&gt;Which is the shortest path?&lt;/span&gt;
 
@@ -3358,7 +3362,7 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="63" name="Q5" tags="" position="1400,1850" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;&lt;if visited() is 1&gt;&gt;
-&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;That puzzle is called &quot;travelling salesman problem&quot;, it&#39;s an interesting 
+&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;That puzzle is called &quot;travelling salesman problem&quot;, it&#39;s an interesting
 Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 &lt;&lt;cont append keypress&gt;&gt;\
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
@@ -3375,7 +3379,7 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
 &lt;&lt;radiobutton &quot;$qFiveLikert&quot; &quot;1&quot;&gt;&gt; Not really... I never had the chance
 &lt;&lt;radiobutton &quot;$qFiveLikert&quot; &quot;2&quot;&gt;&gt; I had some experience but I wouldn&#39;t say a lot
-&lt;&lt;radiobutton &quot;$qFiveLikert&quot; &quot;3&quot;&gt;&gt; Definitely, we always need to design with very few resources 
+&lt;&lt;radiobutton &quot;$qFiveLikert&quot; &quot;3&quot;&gt;&gt; Definitely, we always need to design with very few resources
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
@@ -3412,7 +3416,7 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
 &lt;&lt;radiobutton &quot;$qFiveLikert&quot; &quot;1&quot;&gt;&gt; Not really... I never had the chance
 &lt;&lt;radiobutton &quot;$qFiveLikert&quot; &quot;2&quot;&gt;&gt; I had some experience but I wouldn&#39;t say a lot
-&lt;&lt;radiobutton &quot;$qFiveLikert&quot; &quot;3&quot;&gt;&gt; Definitely, we always need to design with very few resources 
+&lt;&lt;radiobutton &quot;$qFiveLikert&quot; &quot;3&quot;&gt;&gt; Definitely, we always need to design with very few resources
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
@@ -3420,7 +3424,7 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 &lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qFive&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
 
 [[Let&#39;s keep moving|Q5 check]]</tw-passagedata><tw-passagedata pid="67" name="beanCheck" tags="" position="225,1050" size="100,100">&lt;&lt;audio &quot;coin2&quot; play&gt;&gt;\
-&lt;&lt;set $beansChecker to true&gt;&gt;\ 
+&lt;&lt;set $beansChecker to true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;You got a screwdriver!&lt;/span&gt;\
 
 &lt;&lt;include [[challenge1 check]]&gt;&gt;
@@ -3438,7 +3442,7 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 </tw-passagedata><tw-passagedata pid="70" name="Story 1b" tags="characters" position="425,675" size="100,100">&lt;&lt;speech &quot;Marble&quot;&gt;&gt; Well we are currently working on a water quality project. And I think we can collaborate!&quot;
 &lt;&lt;/speech&gt;&gt;
 
-&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt; Sounds awesome. If you want to come in I&#39;ll introduce you to the space. 
+&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt; Sounds awesome. If you want to come in I&#39;ll introduce you to the space.
 Do you want [[some coffee|challenge1]]?&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
@@ -3525,7 +3529,7 @@ If you need a hint, read the instructions *very* carefully :)
 &lt;span class=&quot;macro-type&quot;&gt;\
 &lt;&lt;radiobutton &quot;$qSixLikert&quot; &quot;1&quot;&gt;&gt; Not really... I never had the chance
 &lt;&lt;radiobutton &quot;$qSixLikert&quot; &quot;2&quot;&gt;&gt; I had some experience but I wouldn&#39;t say a lot
-&lt;&lt;radiobutton &quot;$qSixLikert&quot; &quot;3&quot;&gt;&gt; Yes, we have to do this quite often 
+&lt;&lt;radiobutton &quot;$qSixLikert&quot; &quot;3&quot;&gt;&gt; Yes, we have to do this quite often
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
@@ -3559,7 +3563,7 @@ If you need a hint, read the instructions *very* carefully :)
 
 [img[img/Logic.jpg]]
 
-&lt;div class=&quot;challenges&quot;&gt;Project A does not use too much of anything 
+&lt;div class=&quot;challenges&quot;&gt;Project A does not use too much of anything
 Project B is low-energy
 Project C impacts can increase the bills
 Project D affects biodiversity&lt;/div&gt;
@@ -3617,7 +3621,7 @@ Project D affects biodiversity&lt;/div&gt;
 
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="94" name="prechallenge8" tags="mkspace" position="2200,1800" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
-&lt;div class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;Sam is there but can&#39;t get in! 
+&lt;div class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;Sam is there but can&#39;t get in!
 The only door wide enough for a wheelchair is locked&lt;/div&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge8&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="challenge8" tags="mkspace" position="2200,1925" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Can you help unlocking the door?&lt;/span&gt;
@@ -3647,7 +3651,7 @@ The only door wide enough for a wheelchair is locked&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="98" name="Q8" tags="" position="2200,2300" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;&lt;if visited() is 1&gt;&gt;
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;42, what a mysterious number... 
+&lt;span class=&quot;macro-type&quot;&gt;42, what a mysterious number...
 &lt;&lt;cont append keypress&gt;&gt;\
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;&lt;typesim &quot;Not funny to leave that door locked though!&quot;&gt;&gt;
@@ -3702,7 +3706,7 @@ The only door wide enough for a wheelchair is locked&lt;/div&gt;
 &lt;span class=&quot;macro-type&quot;&gt; How could we work on these?&lt;/span&gt;
 &lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qEight&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
 
-[[Got it|Q8 check]]</tw-passagedata><tw-passagedata pid="101" name="story1.9b" tags="characters" position="2500,1800" size="100,100">&lt;&lt;speech &quot;Marble&quot;&gt;&gt;So, we all tested the devices, they work. 
+[[Got it|Q8 check]]</tw-passagedata><tw-passagedata pid="101" name="story1.9b" tags="characters" position="2500,1800" size="100,100">&lt;&lt;speech &quot;Marble&quot;&gt;&gt;So, we all tested the devices, they work.
 Let&#39;s relax now. Any question for our friends at the makerspace?&lt;&lt;/speech&gt;&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;story1.9c&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="story1.9c" tags="characters" position="2500,1900" size="100,100">&lt;&lt;speech &quot;Aplite&quot;&gt;&gt;Well, sorry to put it this way but we just met a couple of days ago. How can we really trust you?&lt;&lt;/speech&gt;&gt;
@@ -3992,7 +3996,7 @@ We all face it, there is nothing to fear.
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="122" name="Q11" tags="" position="2950,2700" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;It&#39;s so hard to anticipate the future! But we should try at least, right?! 
+&lt;span class=&quot;macro-type&quot;&gt;It&#39;s so hard to anticipate the future! But we should try at least, right?!
 
 What&#39;s your experience “future-proofing” your projects – meaning that even if circumstances change, the projects can still function?&lt;/span&gt;
 
@@ -4037,12 +4041,12 @@ What&#39;s your experience “future-proofing” your projects – meaning that 
 &lt;div class=&quot;challenges&quot;&gt;\
 1. Find all the words in the list. Words can go in any direction and share letters as well as cross over each other:
 
-critical 	-	diverse 	-	local   -	making 		-    open 
+critical 	-	diverse 	-	local   -	making 		-    open
 
 2.  Copy the unused letters starting in the top left corner into the blanks to reveal the hidden message.
 
 ___ ___ ___ ___ ___ ___ (6)
-___ ___ (2) 
+___ ___ (2)
 ___ ___ ___  ___ (4)
 ___ ___ ___ ___ ___ ___ (6)
 &lt;/div&gt;\
@@ -4171,7 +4175,7 @@ ___ ___ ___ ___ ___ ___ (6)
 This coffee smells amazing!&quot;&lt;&lt;/speech&gt;&gt;
 &lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;Thanks, I&#39;m very proud of my coffee and my repairing skills.&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $starsCount += 1&gt;&gt;\
-&lt;&lt;notify&gt;&gt;🌟 You earned a star!&lt;&lt;/notify&gt;&gt;\    
+&lt;&lt;notify&gt;&gt;🌟 You earned a star!&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;audio &quot;coin2&quot; play&gt;&gt;\
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;preQ1&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="141" name="prestory1.5" tags="mkspace" position="1400,1225" size="100,100">&lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;voices&quot; play&gt;&gt;\
