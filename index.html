@@ -319,8 +319,8 @@ body{
   color: black;
 	border-radius: 5px;
 	padding: 16px 8px 8px 8px;
-    box-shadow: 5px 5px 3px pink;
-	background-color: #ffe3e8;
+	background-image: URL("img/laptop-pear.png");
+  background-size: cover;
     opacity: 100%;
   display: flex;
   align-items:flex-start;
@@ -1201,7 +1201,7 @@ align-content: start;
 .back-face {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 3px;
   position: absolute;
   border-radius: 5px;
   background: #1C7CCC;
@@ -1390,7 +1390,11 @@ body {
 
 .values {
  visibility: visible;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.history.controls = false;
+}
+
+
+/*PUZZLE*/
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.history.controls = false;
 
 Config.ui.stowBarInitially = true;
 
@@ -1942,9 +1946,7 @@ $doorOption</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="data"
 </tw-passagedata><tw-passagedata pid="6" name="Q1 check" tags="calm" position="450,1950" size="100,100">&lt;&lt;if $qOneLikert is 0&gt;&gt;
 &lt;div class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! [[Go back|Q1d]]&lt;/div&gt;
 &lt;&lt;elseif $stickerOne is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;
-\
-[[Moving on...|Story 1.2]]
+&lt;&lt;goto &quot;Story 1.2&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -1975,7 +1977,8 @@ $starsCount / 13
 
 &lt;&lt;audio &quot;start&quot; play&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="10" name="StoryBanner" tags="data" position="1900,100" size="100,100">&lt;img style=&quot;margin: &quot; class=&quot;rainbow-border&quot; src=&quot;img\unboxing_logo.png&quot; width=&quot;50%&quot;&gt;\
-</tw-passagedata><tw-passagedata pid="11" name="StorySubtitle" tags="data" position="2100,100" size="100,100">A Critical Making Game</tw-passagedata><tw-passagedata pid="12" name="StoryMenu" tags="data" position="2500,100" size="100,100">&lt;&lt;if $stickerOne&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="11" name="StorySubtitle" tags="data" position="2100,100" size="100,100">&lt;img style=&quot;margin-top: 20px;&quot; src=&quot;img\logo.png&quot; width=&quot;50%&quot;&gt;
+A Critical Making Game</tw-passagedata><tw-passagedata pid="12" name="StoryMenu" tags="data" position="2500,100" size="100,100">&lt;&lt;if $stickerOne&gt;&gt;\
 [[LAPTOP|Passport]]
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="13" name="Q1" tags="" position="450,1375" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
@@ -2095,63 +2098,63 @@ Your rating: $qThirteenLikert.
 
 </tw-passagedata><tw-passagedata pid="15" name="Passport" tags="kitchen" position="2000,300" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
-&lt;div class=&quot;challenges&quot;&gt;&lt;h4&gt;My critical maker laptop (&lt;&lt;return&gt;&gt;)&lt;/h4&gt;\
 &lt;div class=&quot;laptop&quot;&gt;\
 &lt;&lt;if $stickerOne and $stickerSeven and $stickerNine&gt;&gt;\
-&lt;img src=&quot;img/value-Impactful-9.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-Impactful-9.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerOne and $stickerSeven&gt;&gt;\
-&lt;img src=&quot;img/value-Impactful-7.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-Impactful-7.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerOne&gt;&gt;\
-&lt;img src=&quot;img/value-Impactful-1.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-Impactful-1.png&quot; width=20%&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 \
 &lt;&lt;if $stickerSix and $stickerEleven and $stickerThirteen&gt;&gt;\
-&lt;img src=&quot;img/value-joyful.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-joyful.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerSix and $stickerEleven&gt;&gt;\
-&lt;img src=&quot;img/value-joyful-11.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-joyful-11.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerSix&gt;&gt;\
-&lt;img src=&quot;img/value-joyful-6.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-joyful-6.png&quot; width=20%&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 \
 &lt;&lt;if $stickerFive and $stickerSeven and $stickerTen&gt;&gt;\
-&lt;img src=&quot;img/value-local.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-local.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerFive and $stickerSeven&gt;&gt;\
-&lt;img src=&quot;img/value-local-10.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-local-10.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerFive&gt;&gt;\
-&lt;img src=&quot;img/value-local-5.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-local-5.png&quot; width=20%&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 \
 &lt;&lt;if $stickerFour and $stickerSix and $stickerTwelve&gt;&gt;\
-&lt;img src=&quot;img/value-reflexive.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-reflexive.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerFour and $stickerSix&gt;&gt;\
-&lt;img src=&quot;img/value-reflexive-6.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-reflexive-6.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerFour&gt;&gt;\
-&lt;img src=&quot;img/value-reflexive-4.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-reflexive-4.png&quot; width=20%&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 \
 &lt;&lt;if $stickerTwo and $stickerThree and $stickerEight&gt;&gt;\
-&lt;img src=&quot;img/value-social.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-social.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerTwo and $stickerThree&gt;&gt;\
-&lt;img src=&quot;img/value-social-2.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-social-2.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerTwo&gt;&gt;\
-&lt;img src=&quot;img/value-social-3.png&quot; width=25%&gt;
+&lt;img src=&quot;img/value-social-3.png&quot; width=20%&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 \
 &lt;&lt;if $stickerFour and $stickerTen and $stickerTwelve&gt;&gt;\
-&lt;img src=&quot;img/values-open.png&quot; width=25%&gt;
+&lt;img src=&quot;img/values-open.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerFour and $stickerTen&gt;&gt;\
-&lt;img src=&quot;img/values-open-2.png&quot; width=25%&gt;
+&lt;img src=&quot;img/values-open-2.png&quot; width=20%&gt;
 &lt;&lt;elseif $stickerFour&gt;&gt;\
-&lt;img src=&quot;img/values-open3.png&quot; width=25%&gt;
+&lt;img src=&quot;img/values-open3.png&quot; width=20%&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 &lt;/div&gt; \
-&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="16" name="Story 1.2" tags="mkspace" position="725,750" size="100,100">&lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
+
+&lt;span class=&quot;challenges&quot;&gt;&lt;&lt;return&gt;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="16" name="Story 1.2" tags="mkspace" position="725,750" size="100,100">&lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;div&gt;&lt;&lt;speech &quot;Marble&quot;&gt;&gt; &quot;Were you just talking to the computer?!&quot;&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;&lt;timed 1s&gt;&gt;&lt;div class=&quot;challenges&quot;&gt; She looks a little concerned. &lt;/div&gt;&lt;&lt;/timed&gt;&gt;
@@ -2159,12 +2162,12 @@ Your rating: $qThirteenLikert.
 &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt; &quot;Maybe ¯\_(ツ)_/¯¯&quot;&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 3s&gt;&gt;&lt;div class=&quot;challenges&quot;&gt; You start looking for some [[zines|prechallenge2]] for Marble, that a friend made some time ago.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
-</tw-passagedata><tw-passagedata pid="17" name="challenge1" tags="" position="450,775" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="17" name="challenge1" tags="" position="450,775" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;div class=&quot;challenges&quot;&gt;\
 Oh no, the coffee machine is broken! &lt;/div&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;challenge1b&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="challenge1 check" tags="" position="450,1000" size="100,100">&lt;&lt;if $beansChecker and $pressChecker and $grinderChecker&gt;&gt;
-&lt;&lt;goto &#39;Coin1&#39;&gt;&gt;\
+&lt;span class=&quot;challenges&quot;&gt;You found the missing piece! [[Let&#39;s try it|Coin1]]&lt;/span&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;But you can&#39;t make coffee yet :( [[Keep looking!|challenge1b]]&lt;/span&gt;\&lt;&lt;/if&gt;&gt;\
 
@@ -2358,7 +2361,7 @@ Oh no, the coffee machine is broken! &lt;/div&gt;
 &lt;&lt;cont append keypress&gt;&gt;\
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;&lt;typesim &quot;Yeah, annoyed. This zine project should have been finished by now if we want to welcome anyone to the space.&quot;&gt;&gt;
-    &lt;&lt;include [[Q2final]]&gt;&gt;
+    &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;Q2final&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;
 &lt;&lt;/typesim&gt;&gt;
 &lt;&lt;/cont&gt;&gt;
 </tw-passagedata><tw-passagedata pid="23" name="Story 1.3" tags="mkspace" position="925,925" size="100,100">&lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
@@ -2372,7 +2375,7 @@ Oh no, the coffee machine is broken! &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="25" name="Q2 check" tags="calm" position="725,1775" size="100,100">&lt;&lt;if $qTwoLikert is 0&gt;&gt;\
 &lt;div class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! [[Go back|Q2final]]&lt;/div&gt;
 &lt;&lt;elseif $stickerTwo is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
+&lt;&lt;goto &#39;Story 1.3&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -2398,7 +2401,7 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 &lt;span class=&quot;challenge-questions&quot;&gt;&lt;&lt;linkreplace &quot;Check your answers&quot;&gt;&gt;&lt;&lt;include [[challenge3 check]]&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;/span&gt;
 
 &lt;span class=&quot;challenges&quot;&gt;&lt;&lt;linkreplace &quot;I need a hint!&quot;&gt;&gt;\
-&lt;img src=&quot;img/jargon2.jpg&quot; width=80%&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;/span&gt;
+&lt;img src=&quot;img/jargon2.png&quot; width=80%&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;/span&gt;
 </tw-passagedata><tw-passagedata pid="27" name="challenge3 check" tags="mkspace" position="925,1475" size="100,100">&lt;&lt;set $Jargon1 to $Jargon1.toLowerCase()&gt;&gt;\
 &lt;&lt;set $Jargon2 to $Jargon2.toLowerCase()&gt;&gt;\
 &lt;&lt;set $Jargon3 to $Jargon3.toLowerCase()&gt;&gt;\
@@ -2473,14 +2476,13 @@ Sorry, Jargon 4 is not &quot;&lt;i&gt;$Jargon4&lt;/i&gt;&quot;\
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;Tell me more about that if you feel like it. &lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qThree&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qThree&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
 &lt;span class=&quot;challenges&quot;&gt;[[Got it!|Q3 check]]&lt;/span&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Q3 check" tags="calm" position="925,2025" size="100,100">&lt;&lt;if $qThreeLikert is 0&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 &lt;&lt;elseif $stickerThree is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.4&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;preStory 1.4&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -2554,12 +2556,15 @@ href=&quot;https://survey3.zsi.at/index.php/718517?lang=en&quot; target=_blank&g
 &lt;&lt;set $spiderOpen to $qThreeLikertINT + $qFiveLikertINT +$qEightLikertINT&gt;&gt;\
 
 &lt;div class=&quot;results&quot;&gt;\
-Your score on Impactful making is $spiderImpactful / 9! &lt;&lt;showmeter &#39;impactfulBar&#39; `$spiderImpactful / 9`&gt;&gt;\
-Your score on Joyful &amp; meaningful making is $spiderJoyful / 9! &lt;&lt;showmeter &#39;joyfulBar&#39; `$spiderJoyful / 9`&gt;&gt;\
-Your score on Local &amp; connected making is $spiderLocal / 9! &lt;&lt;showmeter &#39;localBar&#39; `$spiderLocal / 9`&gt;&gt;\
-Your score on Reflexive making is $spiderReflexive / 9! &lt;&lt;showmeter &#39;reflexiveBar&#39; `$spiderReflexive / 9`&gt;&gt;\
-Your score on Social &amp; Diverse  making is $spiderSocial / 9! &lt;&lt;showmeter &#39;socialBar&#39; `$spiderSocial / 9`&gt;&gt;\
-Your score on Open making is $spiderOpen / 9! &lt;&lt;showmeter &#39;openBar&#39; `$spiderOpen / 9`&gt;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="33" name="Story 0" tags="calm" position="425,325" size="100,100">&lt;&lt;set $start to true&gt;&gt;\
+Based on the Critical Making project’s 6 Core Values, your scores are:
+
+$spiderImpactful / 9 on how &lt;b&gt;impactful&lt;/b&gt; your practice is! &lt;&lt;showmeter &#39;impactfulBar&#39; `$spiderImpactful / 9`&gt;&gt;\
+$spiderJoyful / 9 on how &lt;b&gt;joyful and meaningful&lt;/b&gt; your practice is! &lt;&lt;showmeter &#39;joyfulBar&#39; `$spiderJoyful / 9`&gt;&gt;\
+$spiderLocal / 9 on how &lt;b&gt;local and connected&lt;/b&gt; your practice is! &lt;&lt;showmeter &#39;localBar&#39; `$spiderLocal / 9`&gt;&gt;\
+$spiderReflexive / 9 on how &lt;b&gt;reflexive&lt;/b&gt; your practice is! &lt;&lt;showmeter &#39;reflexiveBar&#39; `$spiderReflexive / 9`&gt;&gt;\
+$spiderSocial / 9 on how &lt;b&gt;social and diverse&lt;/b&gt; your practice is! &lt;&lt;showmeter &#39;socialBar&#39; `$spiderSocial / 9`&gt;&gt;\
+$spiderOpen / 9 on how &lt;b&gt;open&lt;/b&gt; your practice is! &lt;&lt;showmeter &#39;openBar&#39; `$spiderOpen / 9`&gt;&gt;
+Learn more about what these mean &lt;a href=&quot;https://criticalmaking.eu/&quot;&gt;here&lt;/a&gt;.&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="33" name="Story 0" tags="calm" position="425,325" size="100,100">&lt;&lt;set $start to true&gt;&gt;\
 &lt;&lt;audio &quot;knock&quot; play&gt;&gt;\
 &lt;div class=&quot;challenges&quot;&gt;\
 &lt;&lt;say &#39;Hey there&#39;&gt;&gt;It&#39;s another typical Saturday at the makerspace.
@@ -2594,7 +2599,7 @@ It felt like we could actually change something&lt;&lt;/type&gt;&gt;
 \
 &lt;&lt;timed 8s t8n&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;If you have, which kind of projects?
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qOne&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qOne&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
 [[Let&#39;s keep moving|Q1 check]]&lt;&lt;/type&gt;&gt;
 &lt;&lt;/timed&gt;&gt;&lt;/div&gt;
@@ -2603,8 +2608,8 @@ It felt like we could actually change something&lt;&lt;/type&gt;&gt;
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;zine2&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
 </tw-passagedata><tw-passagedata pid="39" name="zine2" tags="mkspace" position="725,1350" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Oh no...&lt;/span&gt;
 &lt;img src=&quot;img/Zine2.png&quot; width=&quot;70%&quot;&gt;\
-&lt;&lt;speech &quot;You&quot;&gt;&gt; Well, this is embarrasing. We&#39;ll have to [[check the website|Q2]].&lt;&lt;/speech&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Q2final" tags="" position="725,1675" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;What about you? Have you tried talking about your space with other people, in a way that everyone feels included? &lt;/span&gt;
+&lt;&lt;speech &quot;You&quot;&gt;&gt; Well, this is embarrasing. We&#39;ll have to [[check the website|Q2]].&lt;&lt;/speech&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Q2final" tags="" position="725,1625" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;What about you? Have you tried talking about your space with other people, in a way that everyone feels included?
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
@@ -2615,9 +2620,12 @@ It felt like we could actually change something&lt;&lt;/type&gt;&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;Which ways have you tried?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qTwo&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qTwo&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
-[[Got it!|Q2 check]]</tw-passagedata><tw-passagedata pid="41" name="Story1.3b" tags="mkspace" position="925,1150" size="100,100">&lt;&lt;speech &quot;Granite&quot;&gt;&gt;&quot;Welcome to the space! Here is a very good summary of my project. Let me know if you want to join!&quot;&lt;&lt;/speech&gt;&gt;\
+[[Got it!|Q2 check]]
+&lt;&lt;/type&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="41" name="Story1.3b" tags="mkspace" position="925,1150" size="100,100">&lt;&lt;speech &quot;Granite&quot;&gt;&gt;&quot;Welcome to the space! Here is a very good summary of my project. Let me know if you want to join!&quot;&lt;&lt;/speech&gt;&gt;\
 
 &lt;section class=&quot;paper&quot;&gt;\
 	&lt;article class=&quot;paperheader&quot;&gt;&lt;/article&gt;\
@@ -2638,20 +2646,21 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
     &lt;&lt;include [[Q3final]]&gt;&gt;
     &lt;&lt;/typesim&gt;&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Q3final" tags="" position="925,1925" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;What about you? Have you considered who is giving workshops or teaching in your space, and to find people who can make  everyone feel welcome and included?&lt;/span&gt;
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;What about you? Have you considered who is giving workshops or teaching in your space, and to find people who can make  everyone feel welcome and included?&lt;/span&gt;
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
 &lt;&lt;radiobutton &quot;$qThreeLikert&quot; &quot;1&quot;&gt;&gt; Not really... I never had the chance
 &lt;&lt;radiobutton &quot;$qThreeLikert&quot; &quot;2&quot;&gt;&gt; I had some experience but I wouldn&#39;t say a lot
-&lt;&lt;radiobutton &quot;$qThreeLikert&quot; &quot;3&quot;&gt;&gt;Absolutely, we always consider who is leading workshops and try to make it accessible
+&lt;&lt;radiobutton &quot;$qThreeLikert&quot; &quot;3&quot;&gt;&gt; Absolutely, we always consider who is leading workshops and try to make it accessible
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;How have you addressed this issue? &lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qThree&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qThree&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
-[[Got it!|Q3 check]]</tw-passagedata><tw-passagedata pid="44" name="Story 1.4" tags="mkspace" position="1125,1200" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
+[[Got it!|Q3 check]]
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Story 1.4" tags="mkspace" position="1125,1200" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
 &lt;&lt;speech &quot;Marble&quot;&gt;&gt;So, we want to be able to test quickly if tap water is safe for consumption&lt;&lt;/speech&gt;&gt;
 
 &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;Granite&quot;&gt;&gt;We could make [[an app|Story 1.4b]] that checks official measurements and reports them back in a big screen!&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Story 1.5" tags="mkspace" position="1400,1325" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
@@ -2686,10 +2695,6 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;story1.13b&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="challenge4" tags="mkspace" position="1125,1625" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Can you find the key to get out of this maze?&lt;/span&gt;
-
-&lt;&lt;textboxPlus &quot;mazeKey&quot; &quot;$mazeKey&quot; `{ maxlength: 6}`&gt;&gt;
-&lt;span class=&quot;challenges&quot;&gt;[[Enter the key|challenge4check]]&lt;/span&gt;
-
 	&lt;div id=&quot;labyrinth&quot;&gt;\
 		&lt;input type=&quot;radio&quot; name=&quot;s&quot; id=&quot;s_w_7&quot; hidden&gt;\
 		&lt;!-- Horizontal lines --&gt;
@@ -3456,7 +3461,11 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
         The key is:
         LISTEN
         &lt;/div&gt;
-	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Coin4" tags="" position="1125,1825" size="100,100">&lt;&lt;if visited() is 1&gt;&gt;
+	&lt;/div&gt;
+
+&lt;div class=&quot;challenges&quot; style=&quot;margin-top: 80px;&quot;&gt;&lt;&lt;textboxPlus &quot;mazeKey&quot; &quot;$mazeKey&quot; `{ maxlength: 6}`&gt;&gt;\
+
+[[Enter the key|challenge4check]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Coin4" tags="" position="1125,1825" size="100,100">&lt;&lt;if visited() is 1&gt;&gt;
 	&lt;&lt;set $starsCount += 1&gt;&gt;\
 &lt;&lt;notify&gt;&gt;🌟 You earned a star!&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;audio &quot;coin2&quot; play&gt;&gt;\
@@ -3474,7 +3483,7 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;Overengineering much...?&lt;&lt;/type&gt;&gt;
 &lt;&lt;cont append keypress&gt;&gt;\
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
-&lt;&lt;typesim &quot;It&#39;s so easy to get carried away and use the words I’m most comfortable with...&quot;&gt;&gt;
+&lt;&lt;typesim &quot;It’s so easy to get carried away and start planning a project only from your own point of view...&quot;&gt;&gt;
     &lt;&lt;include [[Q4final]]&gt;&gt;
 &lt;&lt;/typesim&gt;&gt;
 &lt;&lt;/cont&gt;&gt;
@@ -3485,14 +3494,14 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
-&lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;1&quot;&gt;&gt; Not really... I never had the chance
+&lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;1&quot;&gt;&gt; Not really... It hasn&#39;t happened to me yet
 &lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;2&quot;&gt;&gt; I have seen some examples but I wouldn&#39;t say a lot
 &lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;3&quot;&gt;&gt; Yes, many times
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;Tell me more about that if you feel like it. Do you have any ideas how to better understand each other’s problems?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qFour&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qFour&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
 [[Got it!|Q4 check]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Q4b" tags="" position="1125,2025" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;I think it&#39;s all about listening, paying attention to what the other person has to say.&lt;&lt;/type&gt;&gt;
@@ -3506,8 +3515,7 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 
 
 &lt;&lt;elseif $stickerFour is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.5&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;prestory1.5&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -3519,20 +3527,21 @@ The Smart Home System is a hardware project designed to provide a monitoring sol
 
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="59" name="Q4final" tags="" position="1125,2125" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;Have you experienced any situations were makers got too excited and the solutions started getting too far away from people’s needs?&lt;/span&gt;
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;Have you experienced any situations were makers got too excited and the solutions started getting too far away from people’s needs?&lt;/span&gt;
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
-&lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;1&quot;&gt;&gt; Not really... I never had the chance
+&lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;1&quot;&gt;&gt; Not really... It hasn&#39;t happened to me yet
 &lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;2&quot;&gt;&gt; I have seen some examples but I wouldn&#39;t say a lot
 &lt;&lt;radiobutton &quot;$qFourLikert&quot; &quot;3&quot;&gt;&gt; Yes, many times
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;Tell me more about that if you feel like it. Do you have any ideas how to better understand each other’s problems?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qFour&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qFour&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
-[[Got it!|Q4 check]]</tw-passagedata><tw-passagedata pid="60" name="challenge5" tags="mkspace" position="1400,1550" size="100,100">&lt;div class=&quot;challenges&quot;&gt;Find the shortest pathway between these components, using each of them at least once.&lt;/div&gt;\
+[[Got it!|Q4 check]]
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="challenge5" tags="mkspace" position="1400,1550" size="100,100">&lt;div class=&quot;challenges&quot;&gt;Find the shortest pathway between these components, using each of them at least once.&lt;/div&gt;\
 
 &lt;img src=&quot;img/pathways.jpg&quot; width=40%&gt;
 
@@ -3576,7 +3585,7 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;How do you manage?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qFive&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qFive&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 [[Let&#39;s keep moving|Q5 check]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Q5b" tags="" position="1400,1975" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;It&#39;s a nice challenge to work with and make the most of what you already have, what do you think?&lt;&lt;/type&gt;&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;\
@@ -3588,8 +3597,7 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt; &lt;/span&gt;
 
 &lt;&lt;elseif $stickerFive is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.6&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;Story 1.6&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -3601,7 +3609,7 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="66" name="Q5final" tags="" position="1400,2100" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;Have you ever had to work around scarce resources or lack of skills in your project?&lt;/span&gt;
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;Have you ever had to work around scarce resources or lack of skills in your project?&lt;/span&gt;
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
@@ -3612,9 +3620,10 @@ Algorithm to find the shortest and most efficient route&lt;&lt;/type&gt;&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;How do you manage?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qFive&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qFive&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
-[[Let&#39;s keep moving|Q5 check]]</tw-passagedata><tw-passagedata pid="67" name="beanCheck" tags="" position="225,1050" size="100,100">&lt;&lt;audio &quot;coin2&quot; play&gt;&gt;\
+[[Let&#39;s keep moving|Q5 check]]
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="beanCheck" tags="" position="225,1050" size="100,100">&lt;&lt;audio &quot;coin2&quot; play&gt;&gt;\
 &lt;&lt;set $beansChecker to true&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;You got a screwdriver!&lt;/span&gt;\
 
@@ -3646,13 +3655,13 @@ Do you want [[some coffee|challenge1]]?&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;
     &lt;/map&gt;\</tw-passagedata><tw-passagedata pid="72" name="preQ1" tags="" position="450,1250" size="100,100">&lt;&lt;audio &quot;mistery&quot; play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;But while you think how good you&#39;re at making coffee, a &lt;span class=&quot;macro-type&quot;&gt;[[green glow|Q1]]&lt;/span&gt; catches your eye...&lt;/span&gt;
 
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Q1&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="prechallenge2" tags="" position="725,850" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Q1&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="prechallenge2" tags="" position="725,850" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;div class=&quot;challenges&quot;&gt;You found the zines box, but it&#39;s locked!&lt;/div&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;challenge2&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="1.3beta" tags="mkspace" position="925,1050" size="100,100">&lt;&lt;speech &quot;Granite&quot;&gt;&gt;Hi there!&lt;&lt;/speech&gt;&gt;
 &lt;&lt;speech &quot;You&quot;&gt;&gt;Hey Grani! This is Marble, it&#39;s her first time at the makerspace. Can you tell her about your [[project|Story1.3b]]?&lt;&lt;/speech&gt;&gt;
 &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;Marble&quot;&gt;&gt;Hi there!&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;
-</tw-passagedata><tw-passagedata pid="75" name="prechallenge3" tags="mkspace" position="925,1250" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="75" name="prechallenge3" tags="mkspace" position="925,1250" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Oh no, it is full of jargon!&lt;/span&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge3&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Story 1.4b" tags="mkspace" position="1125,1300" size="100,100">&lt;&lt;speech &quot;Marble&quot;&gt;&gt;Oh but that wouldn&#39;t work because we would like to measure it with the kids...&lt;&lt;/speech&gt;&gt;
@@ -3669,7 +3678,7 @@ Do you want [[some coffee|challenge1]]?&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;
 &lt;&lt;audio &quot;voices&quot; play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Voices coming from the next room distract you from the conversation...&lt;/span&gt;
 
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;Story 1.4&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="prechallenge5" tags="mkspace" position="1400,1425" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+&lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;Story 1.4&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="prechallenge5" tags="mkspace" position="1400,1425" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 
 &lt;span class=&quot;challenges&quot;&gt;Well, we can&#39;t buy all these components! We need to find a simpler but effective design&lt;/span&gt;
 
@@ -3710,11 +3719,11 @@ If you need a hint, read the instructions *very* carefully :)
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;Sometimes the best strategy is to hide in plain sight :)&lt;&lt;/type&gt;&gt;
 &lt;&lt;cont append keypress&gt;&gt;\
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
-&lt;&lt;typesim &quot;I knew I had seen it somewhere...&quot;&gt;&gt;
+&lt;&lt;typesim &quot;Can&#39;t believe it took me so long to see it!&quot;&gt;&gt;
     &lt;&lt;include [[Q6b]]&gt;&gt;
 &lt;&lt;/typesim&gt;&gt;
 &lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Q6b" tags="" position="1700,2300" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;Have you ever tried a workaround, to find alternatives to the way things are usually done?&lt;/span&gt;
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;Have you ever tried a workaround, to find alternatives to the way things are usually done?&lt;/span&gt;
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
@@ -3725,14 +3734,14 @@ If you need a hint, read the instructions *very* carefully :)
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;How do you manage?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qSix&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qSix&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
-[[Let&#39;s keep moving|Q6check]]</tw-passagedata><tw-passagedata pid="86" name="Q6check" tags="calm" position="1700,2425" size="100,100">&lt;&lt;if $qSixLikert is 0&gt;&gt;\
+[[Let&#39;s keep moving|Q6check]]
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Q6check" tags="calm" position="1700,2425" size="100,100">&lt;&lt;if $qSixLikert is 0&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerSix is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.7&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;Story 1.7&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -3747,7 +3756,7 @@ If you need a hint, read the instructions *very* carefully :)
 
 &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;Granite&quot;&gt;&gt;We can say the project is about the tech, so it is supported...&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;...but it&#39;s actually [[an excuse|challenge6]] for getting people to talk about this!&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="story1.7b" tags="mkspace" position="1925,1775" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+&lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;...but it&#39;s actually [[an excuse|challenge6]] for getting people to talk about this!&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="story1.7b" tags="mkspace" position="1925,1775" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;A project like this one can&#39;t generate so much waste!&lt;/span&gt;\
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge7&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;\</tw-passagedata><tw-passagedata pid="89" name="challenge7" tags="mkspace" position="1925,1900" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Can you help the team identify the impacts of their projects?&lt;/span&gt;
 
@@ -3780,7 +3789,7 @@ Project D affects biodiversity&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="92" name="Q7" tags="" position="1925,2275" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;This one was hard. Thinking before doing! Do you usually consider social and ecological sustainability when planning a new project?
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;This one was hard. Thinking before doing! Do you usually consider social and ecological sustainability when planning a new project?
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
@@ -3791,14 +3800,14 @@ Project D affects biodiversity&lt;/div&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;How do you manage?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qSeven&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qSeven&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
-[[Let&#39;s keep moving|Q7check]]</tw-passagedata><tw-passagedata pid="93" name="Q7check" tags="calm" position="1925,2400" size="100,100">&lt;&lt;if $qSevenLikert is 0&gt;&gt;\
+[[Let&#39;s keep moving|Q7check]]
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="Q7check" tags="calm" position="1925,2400" size="100,100">&lt;&lt;if $qSevenLikert is 0&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerSeven is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.8&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;Story 1.8&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -3809,7 +3818,7 @@ Project D affects biodiversity&lt;/div&gt;
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.8&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
 
 &lt;&lt;/if&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="94" name="prechallenge8" tags="mkspace" position="2200,1800" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="94" name="prechallenge8" tags="mkspace" position="2200,1800" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;div class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;Sam is there but can&#39;t get in!
 The only door wide enough for a wheelchair is locked&lt;/div&gt;
 
@@ -3817,10 +3826,16 @@ The only door wide enough for a wheelchair is locked&lt;/div&gt;
 
 &lt;img src=&quot;img/lock.png&quot; width=50%&gt;
 
-&lt;span class=&quot;challenges&quot;&gt;If you&#39;re completely lost, here is a &lt;a href=&quot;https://news.mit.edu/2019/answer-life-universe-and-everything-sum-three-cubes-mathematics-0910&quot;&gt;hint&lt;/a&gt; that will save you brain power&lt;/span&gt;
-
-&lt;&lt;textboxPlus &quot;lock&quot; &quot;$lockKey&quot; `{ maxlength: 3}`&gt;&gt;
-&lt;span class=&quot;challenge-questions&quot;&gt;[[Check it!|challenge8check]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="96" name="challenge8check" tags="mkspace" position="2200,2050" size="100,100">&lt;&lt;if $lockKey is &quot;042&quot;&gt;&gt;
+&lt;div class=&quot;challenges&quot;&gt;&lt;&lt;textboxPlus &quot;lock&quot; &quot;$lockKey&quot; `{ maxlength: 3}`&gt;&gt;
+[[Check it!|challenge8check]]
+&lt;&lt;link &quot;I need a hint ✣&quot;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&quot;Hint&quot;, &quot;dialog-box&quot;);
+		Dialog.wiki(&quot;Everything starts from zero...&lt;br&gt;&lt;br&gt;&lt;img src=&#39;img/dial.png&#39;/&gt;&quot;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="96" name="challenge8check" tags="mkspace" position="2200,2050" size="100,100">&lt;&lt;if $lockKey is &quot;042&quot;&gt;&gt;
 &lt;&lt;goto [[Coin8]]&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;audio &quot;nop&quot; play&gt;&gt;\
@@ -3861,15 +3876,14 @@ The only door wide enough for a wheelchair is locked&lt;/div&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt; How could we work on these?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qEight&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qEight&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
 [[Got it|Q8 check]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="Q8 check" tags="calm" position="2200,2550" size="100,100">&lt;&lt;if $qEightLikert is 0&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerEight is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.9&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;Story 1.9&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -3881,7 +3895,7 @@ The only door wide enough for a wheelchair is locked&lt;/div&gt;
 
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="100" name="Q8b" tags="" position="2200,2425" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;Do you ever think the barriers people may face to join  your space?&lt;/span&gt;
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;Do you ever think the barriers people may face to join  your space?&lt;/span&gt;
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
@@ -3892,20 +3906,21 @@ The only door wide enough for a wheelchair is locked&lt;/div&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt; How could we work on these?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qEight&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qEight&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
-[[Got it|Q8 check]]</tw-passagedata><tw-passagedata pid="101" name="story1.9b" tags="characters" position="2500,1800" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
+[[Got it|Q8 check]]
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="story1.9b" tags="characters" position="2500,1800" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
 &lt;&lt;speech &quot;Marble&quot;&gt;&gt;So, we all tested the devices, they work.
 Let&#39;s relax now. Any question for our friends at the makerspace?&lt;&lt;/speech&gt;&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;story1.9c&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="story1.9c" tags="characters" position="2500,1900" size="100,100">&lt;&lt;speech &quot;Aplite&quot;&gt;&gt;Well, sorry to put it this way but we just met a couple of days ago. How can we really trust you?&lt;&lt;/speech&gt;&gt;
 
-&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;Em... What do you [[mean|story1.9d]]?&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="prechallenge9" tags="characters" position="2500,2125" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;Em... What do you [[mean|story1.9d]]?&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="prechallenge9" tags="characters" position="2500,2125" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Well, that&#39;s an uncomfortable but necessary silence&lt;/span&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge9&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="challenge9" tags="characters" position="2500,2275" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Help your makerspace understand which pathways and values it can take&lt;/span&gt;
 
-&lt;div class=&quot;challenge-questions&quot;&gt;Step 1. Start at http://criticalmaking.eu/
+&lt;div class=&quot;challenge-questions&quot;&gt;Step 1. Start at https://criticalmaking.eu/gender-equality-making/
 Step 2. Find the story of a Polish maker (hint: &quot;iegN&quot;)
 Step 3. Read through the story and find the key word&lt;/div&gt;
 
@@ -3957,7 +3972,7 @@ Step 3. Read through the story and find the key word&lt;/div&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt; Tell me a little more about it&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qNine&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qNine&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
 [[Got it|Q9 check]]
 &lt;&lt;/if&gt;&gt;
@@ -3965,8 +3980,7 @@ Step 3. Read through the story and find the key word&lt;/div&gt;
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerNine is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.10&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;Story 1.10&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -3979,7 +3993,7 @@ Step 3. Read through the story and find the key word&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="110" name="story1.10b" tags="mkspace" position="2725,1925" size="100,100">&lt;&lt;speech &quot;Granite&quot;&gt;&gt;A friend of mine works at the city council, maybe he could help&lt;&lt;/speech&gt;&gt;
 
-&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;I doubt the city can give us money [[though|prechallenge10]]!&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="prechallenge10" tags="mkspace" position="2725,2050" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;I doubt the city can give us money [[though|prechallenge10]]!&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="prechallenge10" tags="mkspace" position="2725,2050" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;There is no much time to decide and lots of things to do!&lt;/span&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge10&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="challenge10" tags="mkspace" position="2725,2175" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Which partners would you choose to ask for support for this project?&lt;/span&gt;
@@ -4104,7 +4118,7 @@ cards.forEach(card =&gt; card.addEventListener(&#39;click&#39;, flipCard));
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="115" name="Q10" tags="" position="2725,2550" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;Support can be tricky. But like every maker, you are doing this to create a future you want to see...
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;Support can be tricky. But like every maker, you are doing this to create a future you want to see...
 
 Can you think of different resources for supporting your vision?&lt;/span&gt;
 
@@ -4117,15 +4131,14 @@ Can you think of different resources for supporting your vision?&lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt; Which support options do you work with?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qTen&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qTen&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
 [[Got it|Q10 check]]
-</tw-passagedata><tw-passagedata pid="116" name="Q10 check" tags="calm" position="2725,2675" size="100,100">&lt;&lt;if $qTenLikert is 0&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="Q10 check" tags="calm" position="2725,2675" size="100,100">&lt;&lt;if $qTenLikert is 0&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerTen is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.11&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;Story 1.11&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -4140,7 +4153,7 @@ Can you think of different resources for supporting your vision?&lt;/span&gt;
 
 &lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;Shoot!&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;speech &quot;kat&quot;&gt;&gt;You will be collecting people&#39;s data, have you [[thought about that|story1.11c]]?&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="story1.11c" tags="mkspace" position="2950,2200" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+&lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;speech &quot;kat&quot;&gt;&gt;You will be collecting people&#39;s data, have you [[thought about that|story1.11c]]?&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="story1.11c" tags="mkspace" position="2950,2200" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Nop. No one had thought about that!&lt;/span&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge11&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="challenge11" tags="mkspace" position="2950,2325" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Can you solve the riddle to help our friends?&lt;/span&gt;
@@ -4174,7 +4187,7 @@ We all face it, there is nothing to fear.
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="122" name="Q11" tags="" position="2950,2700" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;It&#39;s so hard to anticipate the future! But we should try at least, right?!
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;It&#39;s so hard to anticipate the future! But we should try at least, right?!
 
 What&#39;s your experience “future-proofing” your projects – meaning that even if circumstances change, the projects can still function?&lt;/span&gt;
 
@@ -4187,15 +4200,14 @@ What&#39;s your experience “future-proofing” your projects – meaning that 
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt; How do you work around changes in political, environmental, social circumstances?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qEleven&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qEleven&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
 [[Got it|Q11 check]]
-</tw-passagedata><tw-passagedata pid="123" name="Q11 check" tags="calm" position="2950,2825" size="100,100">&lt;&lt;if $qElevenLikert is 0&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Q11 check" tags="calm" position="2950,2825" size="100,100">&lt;&lt;if $qElevenLikert is 0&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerEleven is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.12&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;Story 1.12&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -4208,32 +4220,19 @@ What&#39;s your experience “future-proofing” your projects – meaning that 
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="124" name="story1.12b" tags="mkspace" position="3175,2150" size="100,100">&lt;&lt;speech &quot;Granite&quot;&gt;&gt;Hey but wait... These sensors don&#39;t measure exactly what we need!&lt;&lt;/speech&gt;&gt;
 
-&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;Marble&quot;&gt;&gt;Oh, and they want us to give them [[full access|prechallenge12]] to the database too...&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="prechallenge12" tags="mkspace" position="3175,2275" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;Marble&quot;&gt;&gt;Oh, and they want us to give them [[full access|prechallenge12]] to the database too...&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="prechallenge12" tags="mkspace" position="3175,2275" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Is this starting to look a little suspicious to you too?&lt;/span&gt;
 
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge12&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="challenge12" tags="mkspace" position="3175,2400" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Can you find the hidden message?&lt;/span&gt;
+&lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge12&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="challenge12" tags="mkspace" position="3175,2400" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Can you put the clue together?&lt;/span&gt;
 
-&lt;img src=&quot;img/puzzle13.png&quot; width=30%&gt;
+&lt;img src=&quot;img/puzzle13.png&quot;&gt;
 
 &lt;div class=&quot;challenges&quot;&gt;\
-1. Find all the words in the list. Words can go in any direction and share letters as well as cross over each other:
+1. Grab all the highlighted letters
+2. Don&#39;t use spaces
 
-critical 	-	diverse 	-	local   -	making 		-    open
-
-2.  Copy the unused letters starting in the top left corner into the blanks to reveal the hidden message.
-
-___ ___ ___ ___ ___ ___ (6)
-___ ___ (2)
-___ ___ ___  ___ (4)
-___ ___ ___ ___ ___ ___ (6)
-&lt;/div&gt;\
-
-
-&lt;div class=&quot;challenges&quot;&gt;&lt;&lt;textboxPlus &quot;puzzle12&quot; &quot;$puzzle12&quot; `{ maxlength: 18}`&gt;&gt;
-[[Check it!|challenge12check]]&lt;/div&gt;
-
-
-</tw-passagedata><tw-passagedata pid="127" name="Coin12" tags="" position="3175,2675" size="100,100">&lt;&lt;if visited() is 1&gt;&gt;
+&lt;&lt;textboxPlus &quot;puzzle12&quot; &quot;$puzzle12&quot; `{ maxlength: 18}`&gt;&gt;
+[[Check it!|challenge12check]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="127" name="Coin12" tags="" position="3175,2675" size="100,100">&lt;&lt;if visited() is 1&gt;&gt;
 	&lt;&lt;set $starsCount += 1&gt;&gt;\
 &lt;&lt;notify&gt;&gt;🌟 You earned a star!&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;audio &quot;coin2&quot; play&gt;&gt;\
@@ -4253,26 +4252,25 @@ ___ ___ ___ ___ ___ ___ (6)
 &lt;span class=&quot;challenges&quot;&gt;Nop, that was not the right answer. [[Try again!|challenge12]]&lt;/span&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Q12" tags="" position="3175,2800" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;Do you think about who you take money and/or resources from and how does that affect your projects?&lt;/span&gt;
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;Do you think about who you take money and/or resources from and how does that affect your projects?&lt;/span&gt;
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
 &lt;&lt;radiobutton &quot;$qTwelveLikert&quot; &quot;1&quot;&gt;&gt; Not really... I never had the chance
 &lt;&lt;radiobutton &quot;$qTwelveLikert&quot; &quot;2&quot;&gt;&gt; I had some experience but I wouldn&#39;t say a lot
-&lt;&lt;radiobutton &quot;$qTwelveLikert&quot; &quot;3&quot;&gt;&gt;Absolutely, we are very careful about who supports our projects
+&lt;&lt;radiobutton &quot;$qTwelveLikert&quot; &quot;3&quot;&gt;&gt; Absolutely, we are very careful about who supports our projects
 &lt;/span&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt; How do you make sure to remain neutral and uninfluenced by external partners?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qTwelve&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qTwelve&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
 [[Got it|Q12 check]]
-</tw-passagedata><tw-passagedata pid="130" name="Q12 check" tags="calm" position="3175,2925" size="100,100">&lt;&lt;if $qTwelveLikert is 0&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Q12 check" tags="calm" position="3175,2925" size="100,100">&lt;&lt;if $qTwelveLikert is 0&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerTwelve is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;Story 1.13&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;Story 1.13&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -4285,7 +4283,7 @@ ___ ___ ___ ___ ___ ___ (6)
 </tw-passagedata><tw-passagedata pid="131" name="story1.13b" tags="mkspace" position="3375,2150" size="100,100">&lt;&lt;audio &quot;voices&quot; stop&gt;&gt;\
 &lt;&lt;speech &quot;You&quot;&gt;&gt;Hey, remember that journalist that visited a week ago? His article is now published, let&#39;s [[take a look|article13]]!&lt;&lt;/speech&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="story1.13c" tags="mkspace" position="3375,2400" size="100,100">&lt;&lt;speech &quot;Granite&quot;&gt;&gt;This is terrible! I&#39;m never giving an interview again!&lt;&lt;/speech&gt;&gt;
 
-&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;People in the community will think we [[actually believe|prechallenge13]] this...&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="133" name="prechallenge13" tags="characters" position="3375,2525" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;You&quot;&gt;&gt;People in the community will think we [[actually believe|prechallenge13]] this...&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="133" name="prechallenge13" tags="characters" position="3375,2525" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;&lt;speech &quot;Marble&quot;&gt;&gt;So we are the helpless ones, when we started this project...!&lt;&lt;/speech&gt;&gt;
 
 &lt;&lt;cont&gt;&gt;&lt;&lt;goto &quot;challenge13&quot;&gt;&gt;&lt;&lt;/cont&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="challenge13" tags="mkspace" position="3375,2650" size="100,100">&lt;span class=&quot;challenges&quot;&gt;Let&#39;s change how we speak about communities!&lt;/span&gt;
@@ -4316,7 +4314,7 @@ ___ ___ ___ ___ ___ ___ (6)
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="137" name="Q13" tags="" position="3375,3025" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;Do you think about the way you speak about your own practice, and how it can affect the decisions you take?&lt;/span&gt;
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;Do you think about the way you speak about your own practice, and how it can affect the decisions you take?&lt;/span&gt;
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
@@ -4327,15 +4325,14 @@ ___ ___ ___ ___ ___ ___ (6)
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt; How do you reflect about this issue?&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qThirteen&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qThirteen&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
 [[Got it|Q13 check]]
-</tw-passagedata><tw-passagedata pid="138" name="Q13 check" tags="calm" position="3375,3150" size="100,100">&lt;&lt;if $qThirteenLikert is 0&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="138" name="Q13 check" tags="calm" position="3375,3150" size="100,100">&lt;&lt;if $qThirteenLikert is 0&gt;&gt;\
 &lt;span class=&quot;challenges&quot;&gt;Please make sure you choose one of the options before moving on! &lt;&lt;return&gt;&gt;&lt;/span&gt;
 
 &lt;&lt;elseif $stickerThirteen is true&gt;&gt;\
-&lt;span class=&quot;challenges&quot;&gt;&lt;span class=&quot;challenges&quot; style=&quot;text-align:center&quot;&gt;You already have this sticker!&lt;/span&gt;&lt;/span&gt;
-&lt;&lt;cont&gt;&gt;&lt;&lt;goto &#39;epilogue&#39;&gt;&gt;&lt;&lt;/cont&gt;&gt;
+&lt;&lt;goto &#39;epilogue&#39;&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;audio &quot;type&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;key&quot; play&gt;&gt;\
@@ -4362,7 +4359,7 @@ This coffee smells amazing!&quot;&lt;&lt;/speech&gt;&gt;
 </tw-passagedata><tw-passagedata pid="146" name="story1.8b" tags="mkspace" position="2200,1700" size="100,100">&lt;&lt;speech &quot;You&quot;&gt;&gt;That&#39;s great! Hopefully they can make it today?&lt;&lt;/speech&gt;&gt;
 
 &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;speech &quot;Marble&quot;&gt;&gt;Well it&#39;s strange, they [[should be here|prechallenge8]] already...&lt;&lt;/speech&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Q9b" tags="" position="2375,2775" size="100,100">&lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
-&lt;span class=&quot;macro-type&quot;&gt;Absolutely. Do you ever think about how your actions contribute to the change you want to see in the world, even if small?&lt;/span&gt;
+&lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;&lt;span class=&quot;macro-type&quot;&gt;Absolutely. Do you ever think about how your actions contribute to the change you want to see in the world, even if small?&lt;/span&gt;
 
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt;\
@@ -4373,9 +4370,10 @@ This coffee smells amazing!&quot;&lt;&lt;/speech&gt;&gt;
 
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;span class=&quot;macro-type&quot;&gt; Tell me a little more about it&lt;/span&gt;
-&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qNine&#39; &#39;Share your thoughts here&#39;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;terminal-azul&quot;&gt;&lt;&lt;textbox &#39;$qNine&#39; &#39; &#39;&gt;&gt;&lt;/span&gt;
 
-[[Got it|Q9 check]]</tw-passagedata><tw-passagedata pid="148" name="epilogue" tags="" position="3525,2050" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
+[[Got it|Q9 check]]
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="epilogue" tags="" position="3525,2050" size="100,100">&lt;&lt;audio &quot;type&quot; play&gt;&gt;\
 &lt;span class=&quot;terminal-rojo&quot;&gt;panda@nautilus:~$&lt;/span&gt;
 &lt;&lt;type 40ms keep class &quot;terminal&quot;&gt;&gt;Well done, Critical Maker! How are you feeling?&lt;&lt;/type&gt;&gt;
 &lt;span class=&quot;terminal-azul&quot;&gt;you@makerspace:~$&lt;/span&gt;
@@ -4390,7 +4388,7 @@ This coffee smells amazing!&quot;&lt;&lt;/speech&gt;&gt;
 &lt;span class=&quot;challenges&quot;&gt;You are about to ask your new friend&#39;s name, but [[suddenly|FINAL]]... &lt;/span&gt;
 &lt;&lt;/typesim&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="150" name="prechallenge4" tags="" position="1125,1525" size="100,100">&lt;&lt;audio &quot;fail&quot; play&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="150" name="prechallenge4" tags="" position="1125,1525" size="100,100">&lt;&lt;audio &quot;fail&quot; volume 0.3 play&gt;&gt;\
 &lt;&lt;timed 1s t8n&gt;&gt;&lt;span class=&quot;challenges&quot;&gt; This is getting  [[confusing|challenge4]] very fast...&lt;/span&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
